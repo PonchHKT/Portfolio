@@ -83,7 +83,7 @@ export default function Home() {
                                 <img style={{backgroundImage: "url(https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png)"}}/>
                             
                                 <div>
-                                    <h1>Ponch - C.</h1>
+                                    <h1>Pornchai - C.</h1>
                                     <h2>Développeur Web</h2>
                                 </div>
 
