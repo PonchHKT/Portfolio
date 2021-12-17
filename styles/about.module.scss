@@ -1,38 +1,38 @@
-.homeContainer {
+.aboutContainer {
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-.introContainer{
+.aboutintroContainer{
     width: 100vw;
-    padding: 150px 0;
+    padding: 100px 0;
     background-color: var(--main-black);
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .introBox{
+    .aboutBox{
         width: 95vw;
         background-color: var(--main-black);
         border-radius: 15px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 30px;
+        align-items: flex-start;
+        padding: 30px 10%;
 
         img{
-            width: 25vw;
+            width: 18vw;
             max-width: 500px;
-            border-radius: 15px;
-            margin-left: 80px;
+            border-radius: 30px;
+            border-top-left-radius: 30px;
+          ;
         }
 
-        .introText{
+        .aboutText{
             margin-left: 100px;
-            padding-bottom: 300px;
 
             h1{
-                color: white;
+                color: var(--main-purple);
                 font-size: 40px;
                 margin-bottom: 50px;
             }
@@ -40,7 +40,6 @@
                 color: white;
                 font-size: 20px;
                 font-weight: normal;
-                margin-bottom: 20px;
             }
         }
     }
