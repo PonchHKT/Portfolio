@@ -14,11 +14,13 @@
     .aboutBox{
         width: 95vw;
         background-color: var(--main-black);
-        border-radius: 15px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         padding: 30px 10%;
+        box-shadow: rgba(50, 50, 93, 0.30) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
         img{
             width: 18vw;
@@ -52,7 +54,7 @@
     width: 100vw;
     height: 100%;
     background-color: var(--main-black);
-    padding-bottom: 250px;
+    padding-right: 30px;
     h1{
         color: white;
         background-color: var(--main-black);

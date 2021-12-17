@@ -1,0 +1,46 @@
+.habilityContainer {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--main-black);
+    padding: 60px;
+    padding-left: 100px;
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .habilityBox{
+        width: 400px;
+        height: 400px;
+        background-color: #1C1E22;
+        margin-right: 40px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        i{
+            font-size: 50px;
+            color: white;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 30px;
+        }
+        h1{
+            color: white;
+            font-weight: normal;
+            font-family: 'Montserrat';
+            padding-left: 15px;
+            padding-top: 10px;
+            margin-bottom: 5px;
+        }
+        h2{
+            color: white;
+            font-weight: normal;
+            font-family: 'Montserrat';
+            padding-left: 15px;
+            padding-top: 10px;
+            font-size: 20px;
+            overflow-wrap: break-word;
+            inline-size: 380px; 
+        }
+    }
+}

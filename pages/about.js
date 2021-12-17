@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import Footer from '../components/footer'
 import Navbar from '../components/Navbar'
-import PurpleButton from '../components/PurpleButton'
 import styles from '../styles/about.module.scss'
+import Hability from '../components/Hability'
 
 export default function About() {
 
@@ -27,11 +26,11 @@ export default function About() {
                     </div>
 
                 </div>
-
                             <div className={styles.myhabilityTitle}>
                                 <h1>Mes habilitées</h1>
                             </div>
 
+                            <Hability/>
             </main>
 
             <Footer/>
