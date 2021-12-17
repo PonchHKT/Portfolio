@@ -62,49 +62,59 @@ export default function Home() {
                 </div>
 
                 <hr className={styles.separator1}/>
-                
-                <div className={styles.introContainer}>
 
-                    <div className={styles.introBox}>
+                <div style={{position: 'relative'}}>
 
-                        <div className={styles.profile}>
-                            <img style={{backgroundImage: "url(https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png)"}}/>
-                        
-                            <div>
-                                <h1>Ponch - C.</h1>
-                                <h2>Développeur Web</h2>
+                    <div className={styles.lineItem1}></div>
+                    <div className={styles.lineItem2}></div>
+                    <div className={styles.lineItem3}></div>
+                    <div className={styles.lineItem4}></div>
+
+                    <div className={styles.introContainer}>
+
+                        <div className={styles.introBox}>
+
+                            <div className={styles.profile}>
+                                <img style={{backgroundImage: "url(https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png)"}}/>
+                            
+                                <div>
+                                    <h1>Ponch - C.</h1>
+                                    <h2>Développeur Web</h2>
+                                </div>
+
+                            </div>
+
+
+                            <div className={styles.introText}>
+                                <h1>A propos de moi</h1>
+                                <p>
+                                    {textIntro}
+                                    {textIntro !== textIntroTemplate ? 
+                                        <button onClick={() => seeMore("plus")}>Voir plus</button> 
+                                        : 
+                                        <button onClick={() => seeMore("moins")}>Voir moins</button>
+                                    }
+                                </p>
+                                <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/>
                             </div>
 
                         </div>
 
+                    </div>
 
-                        <div className={styles.introText}>
-                            <h1>A propos de moi</h1>
-                            <p>
-                                {textIntro}
-                                {textIntro !== textIntroTemplate ? 
-                                    <button onClick={() => seeMore("plus")}>Voir plus</button> 
-                                    : 
-                                    <button onClick={() => seeMore("moins")}>Voir moins</button>
-                                }
-                            </p>
-                            <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/>
+                    <div className={styles.projectTitle}>
+                        <h1>Mes projets</h1>
+
+                        <div>
+                            <Projects/>
+                            <Projects/>
+                            <Projects/>
                         </div>
-
+                        <PurpleButton isPurple text="Voir plus de projet"/>
                     </div>
 
                 </div>
-
-                <div className={styles.projectTitle}>
-                    <h1>Mes projets</h1>
-
-                    <div>
-                        <Projects/>
-                        <Projects/>
-                        <Projects/>
-                    </div>
-                    <PurpleButton isPurple text="Voir plus de projet"/>
-                </div>
+                
 
             </main>
 
