@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import ParticlesBG from '../components/Particles'
+import Projects from '../components/Projects'
 import PurpleButton from '../components/PurpleButton'
 import styles from '../styles/home.module.scss'
 
@@ -59,6 +60,17 @@ export default function Home() {
                             <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-arrow-right"/>
                         </div>
 
+                    </div>
+
+                </div>
+
+                <div className={styles.projectTitle}>
+                    <h1>Mes projets</h1>
+
+                    <div>
+                        <Projects/>
+                        <Projects/>
+                        <Projects/>
                     </div>
 
                 </div>
