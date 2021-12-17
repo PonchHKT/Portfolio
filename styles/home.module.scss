@@ -130,10 +130,41 @@
         z-index: 10;
         width: 70vw;
         background-color: var(--main-black);
-        border-radius: 15px;
         border: 3px solid #1c1e22;
         padding: 30px;
         box-shadow: 5px 5px 16px 7px #d7d7d75e;
+        position: relative;
+
+        .reactTurn1, .reactTurn2, .reactTurn3, .reactTurn4 {
+            position: absolute;
+            background-color: var(--main-purple);
+        }
+
+        .reactTurn1 {
+            animation: rect1 6s infinite;
+            top: -3px;
+            height: 5px;
+        }
+
+        .reactTurn2 {
+            animation: rect2 6s infinite;
+            left: -3px;
+            width: 5px;
+        }
+
+        .reactTurn3 {
+            animation: rect3 6s infinite;
+            bottom: -3px;
+            height: 5px;
+        }
+
+        .reactTurn4 {
+            animation: rect4 6s infinite;
+            right: -3px;
+            width: 5px;
+        }
+
+
         .profile{
             display: flex;
             align-items: center;
@@ -242,3 +273,87 @@
 		opacity: 0.5;
 	}
 }
+
+@keyframes rect1 {
+    0% {
+        right: -3px;
+        width: 0;
+    }
+    25% {
+        right: -3px;
+        width: 25%;
+    }
+    50%{
+        right: 75%;
+        width: 25%;
+    } 
+    75% {
+        right: 100%;
+        width: 0;
+    }
+} 
+
+@keyframes rect2 {
+    0% {
+        top: 75%;
+        height: 25%;
+    }
+    25% {
+        top: 100%;
+        height: 0%;
+    }
+    50% {
+        top: -3px;
+        height: 0%;
+    }
+    75%{
+        top: -3px;
+        height: 25%;
+    } 
+    100% {
+        top: 75%;
+        height: 25%;
+    }
+} 
+
+@keyframes rect3 {
+    0% {
+        left: -3px;
+        width: 0;
+    }
+    25% {
+        left: -3px;
+        width: 25%;
+    }
+    50%{
+        left: 75%;
+        width: 25%;
+    } 
+    75% {
+        left: 100%;
+        width: 0;
+    }
+} 
+
+@keyframes rect4 {
+    0% {
+        bottom: 75%;
+        height: 25%;
+    }
+    25% {
+        bottom: 100%;
+        height: 0%;
+    }
+    50% {
+        bottom: -3px;
+        height: 0%;
+    }
+    75% {
+        bottom: -3px;
+        height: 25%;
+    }
+    100% {
+        bottom: 75%;
+        height: 25%;
+    }
+} 

@@ -74,6 +74,11 @@ export default function Home() {
 
                         <div className={styles.introBox}>
 
+                            <div className={styles.reactTurn1}></div>
+                            <div className={styles.reactTurn2}></div>
+                            <div className={styles.reactTurn3}></div>
+                            <div className={styles.reactTurn4}></div>
+
                             <div className={styles.profile}>
                                 <img style={{backgroundImage: "url(https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png)"}}/>
                             
