@@ -22,6 +22,10 @@
             font-size: 60px;
             a{
                 color: var(--main-purple);
+                &:before {
+                    content: '';
+                    animation: titleChange 20s infinite;
+                }
             }
         }
         h2{
@@ -244,6 +248,37 @@
             position: relative;
             z-index: 10;
         }
+    }
+}
+
+@keyframes titleChange {
+    0% {
+        content: "Ponch";
+        opacity: 1;
+    }
+    25% {
+        content: "Ponch";
+        opacity: 0.2;
+    }
+    26% {
+        content: "ShuxDev";
+        opacity: 0.2;
+    }
+    50% {
+        content: "ShuxDev";
+        opacity: 1;
+    }
+    75% {
+        content: "ShuxDev";
+        opacity: 0.2;
+    }
+    76% {
+        content: "Pornchai - C.";
+        opacity: 0.2;
+    }
+    100% {
+        content: "Pornchai - C.";
+        opacity: 1;
     }
 }
 

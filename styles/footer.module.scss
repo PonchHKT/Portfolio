@@ -22,31 +22,47 @@
         display: flex;
         align-self: start;
         padding: 50px 0;
-        h1{
-        }
         .footerPage{
             display: flex;
             ul{
                 padding: 0 100px;
+
                 .footerTitle{
-                    color: #85BFD1;
+                    color: var(--main-purple);
                     font-weight: bold;
+                    font-size: 25px;
+                    margin-top: 0;
                 }
                 li{
                     margin: 30px 0;
                     list-style: none;
                     cursor: pointer;
                 }
+
+                a {
+                    cursor: pointer;
+
+                    i {
+                        font-size: 20px;
+                        margin: 0 15px;
+                        transition-duration: 0.2s;
+
+                        &:hover {
+                            color: var(--main-purple);
+                        }
+                    }
+                }
             }
         }
     }
-}
-.copyright{
-    display: flex;
-    align-self: start;
-    padding-top: 20px;
-    h1{
-        font-weight: normal;
-        font-size: 15px;
+    .copyright{
+        display: flex;
+        align-self: flex-start;
+        padding-top: 20px;
+        h1{
+            font-weight: normal;
+            font-size: 15px;
+        }
     }
+    
 }

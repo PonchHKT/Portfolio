@@ -20,7 +20,6 @@ const ParticlesBG = () => {
                 events: {
                     onClick: {
                     enable: false,
-                    mode: "push",
                     },
                     onHover: {
                     enable: true,
@@ -61,7 +60,7 @@ const ParticlesBG = () => {
                 move: {
                     direction: "none",
                     enable: true,
-                    outMode: "bounce",
+                    outMode: "out",
                     random: false,
                     speed: 2,
                     straight: false,
@@ -77,7 +76,7 @@ const ParticlesBG = () => {
                     value: 0.5,
                 },
                 shape: {
-                    type: "circle",
+                    type: "",
                 },
                 size: {
                     random: true,

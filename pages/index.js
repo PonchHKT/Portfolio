@@ -48,7 +48,7 @@ export default function Home() {
 
                     <div className={styles.text}>
 
-                        <h1>Je suis <a>Ponch.</a></h1>
+                        <h1>Je suis <a></a></h1>
                         <h2>Développeur Web Junior</h2>
                         <h3>Ceci est mon Portofolio!</h3>
 
