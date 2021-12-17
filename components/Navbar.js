@@ -10,8 +10,8 @@ function Navbar() {
                 </div>
 
                 <ul>
-                    <li><a>Accueil</a></li>
-                    <li><a>A propos de moi</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/about">A propos de moi</a></li>
                     <li><a>Projets</a></li>
                     <li><a>Me contacter</a></li>
                 </ul>

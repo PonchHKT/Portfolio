@@ -1,0 +1,46 @@
+.homeContainer {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.introContainer{
+    width: 100vw;
+    padding: 200px 0;
+    background-color: var(--main-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .introBox{
+        width: 80vw;
+        background-color: var(--main-black);
+        border-radius: 15px;
+        border: 3px solid #1c1e22;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+
+        img{
+            width: 25vw;
+            max-width: 250px;
+            border-radius: 15px;
+        }
+
+        .introText{
+            margin-left: 30px;
+
+            h1{
+                color: white;
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+            h2{
+                color: white;
+                font-size: 20px;
+                font-weight: normal;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

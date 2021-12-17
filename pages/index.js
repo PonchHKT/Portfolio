@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import Footer from '../components/footer'
 import Navbar from '../components/Navbar'
 import ParticlesBG from '../components/Particles'
@@ -16,6 +17,19 @@ export default function Home() {
         a.click()
         document.body.removeChild(a)
     }
+
+    const textIntroTemplate = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+
+    const [textIntro, setTextIntro] = useState(textIntroTemplate.substring(0, 300))
+
+    const seeMore = (val) => {
+        if(val === 'plus') {
+            setTextIntro(textIntroTemplate)
+        } else {
+            setTextIntro(textIntroTemplate.substring(0, 300))
+        }
+    }
+
     return (
         <div className={styles.homeContainer}>
             <Head>
@@ -53,27 +67,28 @@ export default function Home() {
 
                     <div className={styles.introBox}>
 
-                        <img src="https://i.pinimg.com/550x/0e/51/7e/0e517eb57cb5a992ef3230b0e0d792af.jpg"/>
+                        <div className={styles.profile}>
+                            <img style={{backgroundImage: 'url("https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png")'}}/>
+                        
+                            <div>
+                                <h1>Ponch - C.</h1>
+                                <h2>Développeur Web</h2>
+                            </div>
+
+                        </div>
+
 
                         <div className={styles.introText}>
                             <h1>A propos de moi</h1>
-                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
-                            <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-arrow-right"/>
+                            <p>
+                                {textIntro}
+                                {textIntro !== textIntroTemplate ? 
+                                    <button onClick={() => seeMore('plus')}>Voir plus</button> 
+                                    : 
+                                    <button onClick={() => seeMore('moins')}>Voir moins</button>
+                                }
+                            </p>
+                            <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/>
                         </div>
 
                     </div>

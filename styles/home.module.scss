@@ -102,15 +102,35 @@
         background-color: var(--main-black);
         border-radius: 15px;
         border: 3px solid #1c1e22;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding: 30px;
+        box-shadow: 5px 5px 16px 7px #d7d7d75e;
+        .profile{
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
 
-        img{
-            width: 25vw;
-            max-width: 250px;
-            border-radius: 15px;
+            img{
+                background-size: cover;
+                background-position-y: -75px;
+                background-repeat: no-repeat;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+            }
+
+            div {
+                margin-left: 25px;
+
+                h1 {
+                    color: var(--main-purple);
+                    font: normal normal 600 50px/55px 'Montserrat';
+                }
+    
+                h2 {
+                    color: white;
+                }
+            }
+
         }
 
         .introText{
@@ -121,11 +141,23 @@
                 font-size: 40px;
                 margin-bottom: 20px;
             }
-            h2{
+
+            p{
                 color: white;
                 font-size: 20px;
                 font-weight: normal;
                 margin-bottom: 20px;
+                line-height: 30px;
+                button{
+                    margin-left: 10px;
+                    margin-top: 3px;
+                    background-color: var(--main-black);
+                    border: 1px solid var(--main-purple);
+                    border-radius: 5px;
+                    padding: 5px;
+                    cursor: pointer;
+                    color: (var(--main-purple))
+                }
             }
         }
     }
