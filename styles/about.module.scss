@@ -20,7 +20,6 @@
         justify-content: space-between;
         align-items: flex-start;
         padding: 30px 10%;
-        box-shadow: rgba(50, 50, 93, 0.30) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
         img{
             width: 18vw;
@@ -62,4 +61,31 @@
         font-weight: normal;
         padding-bottom: 50px;
     }
+}
+
+.lineAboutItem1, .lineAboutItem2, .lineAboutItem3, .lineAboutItem4 {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: var(--main-purple);
+}   
+
+.lineAboutItem1 {
+    animation: scroll1 6s ease-out infinite;
+    left: 10%;
+}
+
+.lineAboutItem2 {
+    animation: scroll2 8s ease-out infinite;
+    left: 35%;
+}
+
+.lineAboutItem3 {
+    animation: scroll1 9s ease-out infinite;
+    right: 35%;
+}
+
+.lineAboutItem4 {
+    animation: scroll2 7s ease-out infinite;
+    right: 10%;
 }

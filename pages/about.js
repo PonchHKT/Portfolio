@@ -12,6 +12,13 @@ export default function About() {
 
             <main>
                 
+            <div style={{position: 'relative'}}>
+
+                <div className={styles.lineAboutItem1}></div>
+                <div className={styles.lineAboutItem2}></div>
+                <div className={styles.lineAboutItem3}></div>
+                <div className={styles.lineAboutItem4}></div>
+
                 <div className={styles.aboutintroContainer}>
 
                     <div className={styles.aboutBox}>
@@ -31,6 +38,9 @@ export default function About() {
                             </div>
 
                             <Hability/>
+
+            </div>
+
             </main>
 
             <Footer/>
