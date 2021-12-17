@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from '../styles/nav.module.scss'
 
 function Navbar() {
@@ -10,10 +11,10 @@ function Navbar() {
                 </div>
 
                 <ul>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/about">A propos de moi</a></li>
-                    <li><a>Projets</a></li>
-                    <li><a>Me contacter</a></li>
+                    <li><Link href="/">Accueil</Link></li>
+                    <li><Link href="/about">A propos de moi</Link></li>
+                    <li><Link href="">Projets</Link></li>
+                    <li><Link href="">Me contacter</Link></li>
                 </ul>
 
             </div>

@@ -4,6 +4,19 @@ import PurpleButton from '../components/PurpleButton'
 import styles from '../styles/about.module.scss'
 
 export default function About() {
+
+    const textIntroTemplate = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry";
+
+    const [textIntro, setTextIntro] = useState(textIntroTemplate.substring(0, 300))
+
+    const seeMore = (val) => {
+        if(val === "plus") {
+            setTextIntro(textIntroTemplate)
+        } else {
+            setTextIntro(textIntroTemplate.substring(0, 300))
+        }
+    }
+
     return (
         <div className={styles.homeContainer}>
 
@@ -19,22 +32,14 @@ export default function About() {
 
                         <div className={styles.introText}>
                             <h1>A propos de moi</h1>
-                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+                            <p>
+                                {textIntro}
+                                {textIntro !== textIntroTemplate ? 
+                                    <button onClick={() => seeMore("plus")}>Voir plus</button> 
+                                    : 
+                                    <button onClick={() => seeMore("moins")}>Voir moins</button>
+                                }
+                            </p>
                             <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-arrow-right"/>
                         </div>
 

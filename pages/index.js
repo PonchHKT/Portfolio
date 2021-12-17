@@ -10,20 +10,20 @@ import styles from '../styles/home.module.scss'
 export default function Home() {
     const dlCV = () => {
         const url = `${window.location.protocol + "//" + window.location.host}/cv/cv.pdf`
-        const a = document.createElement('a')
+        const a = document.createElement("a")
         a.href = url
-        a.download = url.split('/').pop()
+        a.download = url.split("/").pop()
         document.body.appendChild(a)
         a.click()
         document.body.removeChild(a)
     }
 
-    const textIntroTemplate = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+    const textIntroTemplate = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry";
 
     const [textIntro, setTextIntro] = useState(textIntroTemplate.substring(0, 300))
 
     const seeMore = (val) => {
-        if(val === 'plus') {
+        if(val === "plus") {
             setTextIntro(textIntroTemplate)
         } else {
             setTextIntro(textIntroTemplate.substring(0, 300))
@@ -68,7 +68,7 @@ export default function Home() {
                     <div className={styles.introBox}>
 
                         <div className={styles.profile}>
-                            <img style={{backgroundImage: 'url("https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png")'}}/>
+                            <img style={{backgroundImage: "url(https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png)"}}/>
                         
                             <div>
                                 <h1>Ponch - C.</h1>
@@ -83,9 +83,9 @@ export default function Home() {
                             <p>
                                 {textIntro}
                                 {textIntro !== textIntroTemplate ? 
-                                    <button onClick={() => seeMore('plus')}>Voir plus</button> 
+                                    <button onClick={() => seeMore("plus")}>Voir plus</button> 
                                     : 
-                                    <button onClick={() => seeMore('moins')}>Voir moins</button>
+                                    <button onClick={() => seeMore("moins")}>Voir moins</button>
                                 }
                             </p>
                             <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/>
