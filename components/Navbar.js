@@ -2,7 +2,7 @@ import styles from '../styles/nav.module.scss'
 
 function Navbar() {
     return (
-        <div className={styles.navContainer}>
+        <header className={styles.navContainer}>
             <div className={styles.navItems}>
 
                 <div>
@@ -18,7 +18,7 @@ function Navbar() {
 
             </div>
 
-        </div>
+        </header>
     )
 }
 

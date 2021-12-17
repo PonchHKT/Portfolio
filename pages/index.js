@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '../components/footer'
 import Navbar from '../components/Navbar'
 import ParticlesBG from '../components/Particles'
 import Projects from '../components/Projects'
@@ -38,7 +39,7 @@ export default function Home() {
                         <h3>Ceci est mon Portofolio!</h3>
 
                         <div className={styles.buttonContainer}>
-                            
+                            <PurpleButton isPurple text="Mes projets"/>
                             <PurpleButton text="Télécharger CV" icon="fad fa-download" action={() => dlCV()}/>
                         </div>
 
@@ -56,7 +57,22 @@ export default function Home() {
 
                         <div className={styles.introText}>
                             <h1>A propos de moi</h1>
-                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            <span/> when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            <span/>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                            <span/>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h2>
                             <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-arrow-right"/>
                         </div>
 
@@ -77,6 +93,9 @@ export default function Home() {
 
             </main>
 
+            <Footer/>
+
         </div>
+        
     )
 }

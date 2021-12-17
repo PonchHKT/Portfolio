@@ -77,14 +77,21 @@
 
 .separator1{
     width: 100%;
-    height: 2px;
+    height: 1px;
+    background-color: rgb(82, 82, 82);
+    border: none;
+}
+
+.separator2{
+    width: 100%;
+    height: 1px;
     background-color: rgb(82, 82, 82);
     border: none;
 }
 
 .introContainer{
     width: 100vw;
-    padding: 300px 0;
+    padding: 200px 0;
     background-color: var(--main-black);
     display: flex;
     align-items: center;
@@ -130,7 +137,7 @@
     width: 100vw;
     height: 100%;
     background-color: var(--main-black);
-    padding-bottom: 100px;
+    padding-bottom: 250px;
     h1{
         color: white;
         background-color: var(--main-black);
