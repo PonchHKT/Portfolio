@@ -36,6 +36,10 @@ function Footer() {
             </div>
 
             <hr/>
+
+            <div className={styles.copyright}>
+                <h1>© 2021 Pornchai Chanaloet</h1>
+            </div>
             
         </footer>
 
