@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Footer from '../components/footer'
 import Navbar from '../components/Navbar'
 import PurpleButton from '../components/PurpleButton'
