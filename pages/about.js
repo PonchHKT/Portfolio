@@ -6,18 +6,6 @@ import styles from '../styles/about.module.scss'
 
 export default function About() {
 
-    const textIntroTemplate = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry";
-
-    const [textIntro, setTextIntro] = useState(textIntroTemplate.substring(0, 300))
-
-    const seeMore = (val) => {
-        if(val === "plus") {
-            setTextIntro(textIntroTemplate)
-        } else {
-            setTextIntro(textIntroTemplate.substring(0, 300))
-        }
-    }
-
     return (
         <div className={styles.homeContainer}>
 
@@ -29,24 +17,20 @@ export default function About() {
 
                     <div className={styles.introBox}>
 
-                        <img src="https://i.pinimg.com/550x/0e/51/7e/0e517eb57cb5a992ef3230b0e0d792af.jpg"/>
+                        <img src="https://cdn.discordapp.com/attachments/789414641498325032/920306693823430696/image0.png"/>
 
                         <div className={styles.introText}>
-                            <h1>A propos de moi</h1>
-                            <p>
-                                {textIntro}
-                                {textIntro !== textIntroTemplate ? 
-                                    <button onClick={() => seeMore("plus")}>Voir plus</button> 
-                                    : 
-                                    <button onClick={() => seeMore("moins")}>Voir moins</button>
-                                }
-                            </p>
-                            <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-arrow-right"/>
+                            <h1>Pornchai Chanaloet</h1>
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h2>
                         </div>
 
                     </div>
 
                 </div>
+
+                            <div className={styles.myhabilityTitle}>
+                                <h1>Mes habilitées</h1>
+                            </div>
 
             </main>
 
