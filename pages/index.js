@@ -38,7 +38,7 @@ export default function Home() {
                         <h3>Ceci est mon Portofolio!</h3>
 
                         <div className={styles.buttonContainer}>
-                            <PurpleButton isPurple text="Mes projets"/>
+                            
                             <PurpleButton text="Télécharger CV" icon="fad fa-download" action={() => dlCV()}/>
                         </div>
 
@@ -72,7 +72,7 @@ export default function Home() {
                         <Projects/>
                         <Projects/>
                     </div>
-
+                    <PurpleButton isPurple text="Voir plus de projet"/>
                 </div>
 
             </main>
