@@ -5,17 +5,16 @@
 
 .introContainer{
     width: 100vw;
-    padding: 200px 0;
+    padding: 150px 0;
     background-color: var(--main-black);
     display: flex;
     align-items: center;
     justify-content: center;
 
     .introBox{
-        width: 80vw;
+        width: 95vw;
         background-color: var(--main-black);
         border-radius: 15px;
-        border: 3px solid #1c1e22;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -23,17 +22,19 @@
 
         img{
             width: 25vw;
-            max-width: 250px;
+            max-width: 500px;
             border-radius: 15px;
+            margin-left: 80px;
         }
 
         .introText{
-            margin-left: 30px;
+            margin-left: 100px;
+            padding-bottom: 300px;
 
             h1{
                 color: white;
                 font-size: 40px;
-                margin-bottom: 20px;
+                margin-bottom: 50px;
             }
             h2{
                 color: white;
@@ -42,5 +43,23 @@
                 margin-bottom: 20px;
             }
         }
+    }
+}
+.myhabilityTitle {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--main-black);
+    padding-bottom: 250px;
+    h1{
+        color: white;
+        background-color: var(--main-black);
+        font-size: 50px;
+        font-family: 'Montserrat';
+        font-weight: normal;
+        padding-bottom: 50px;
     }
 }
