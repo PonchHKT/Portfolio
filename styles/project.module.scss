@@ -1,0 +1,39 @@
+.projectContainer {
+    min-height: 100vh;
+    background-color: var(--main-black);
+    padding: 200px;
+    width: 100vw;
+    overflow-x: hidden;
+    .guide{
+        h1{
+            color: rgb(161, 161, 161);
+            font-size: 18px;
+            font-weight: semi-bold;
+        }
+        h2{
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+            padding-top: 25px;
+        }
+        img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+        }
+    }
+}
+.about{
+    h1{
+        color: white;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+}
+
+
