@@ -4,18 +4,18 @@ import Footer from '../components/Footer'
 
 export default function Contact() {
     return (
-        <div className={styles.contactPage}>
-            
-            <main>
+        
+        
+        <div className={styles.contactContainer}>
 
             <Navbar/>
 
-            <div className={styles.contactContainer}>
+            <main>
 
-                <div className={styles.contactText}>
-
-                    <h1>Hello !</h1>
-                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                    <div className={styles.hello}>
+                        <h1>Hello !</h1>
+                        <h2>I am actually writing anything about anything because it distract you from knowing that this is just a Loremipsum but way better.</h2>
+                    </div>
 
                     <div className={styles.contactboxContainer}>
 
@@ -42,10 +42,6 @@ export default function Contact() {
                             </div>
 
                         </div>
-
-                    </div>
-
-                </div>
 
 
             </div>
