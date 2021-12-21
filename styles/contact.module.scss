@@ -41,9 +41,11 @@ main{
                         border-radius: 10px;
                         background-color: #1C1E22;
                         border: 1px solid #A0A0A1;
+                        color: white;
+                        padding-left: 10px;
+                        font-size: 20px;
                     }
                     .inputnumber::placeholder{
-                        padding-left: 20px;
                         color: #A0A0A1;
                         font-size: 17px;
                     }
@@ -63,9 +65,11 @@ main{
                         border-radius: 10px;
                         background-color: #1C1E22;
                         border: 1px solid #A0A0A1;
+                        color: white;
+                        padding-left: 10px;
+                        font-size: 20px;
                     }
                     .inputemail::placeholder{
-                        padding-left: 20px;
                         color: #A0A0A1;
                         font-size: 17px;
                     }
@@ -85,6 +89,9 @@ main{
                         height: 150px;
                         background-color: #1C1E22;
                         border: 1px solid #A0A0A1;
+                        color: white;
+                        padding-left: 10px;
+                        font-size: 15px;
                     }
                     .inputmsg::placeholder{
                         position: static;
