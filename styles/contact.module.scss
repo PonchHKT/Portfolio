@@ -1,0 +1,132 @@
+.contactPage{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.contactContainer{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-black);
+    .contactText{
+        padding-top: 7%;
+        width: 100vw;
+        height: 110vh;
+        h1{
+            color: white;
+            font-size: 60px;
+            text-align: center;
+        }
+        h2{
+            color: white;
+            font-size: 20px;
+            font-weight: normal;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+        .contactboxContainer{
+            width: 100vw;
+            height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .contactBox{
+                width: 447px;
+                height: 600px;
+                background-color: #26292D;
+                border-radius: 15px;
+                .numberforms{
+                    padding-left: 30px;
+                    padding-top: 35px;
+                    h3{
+                        color: white;
+                        font-size: 17px;
+                        font-weight: normal;
+                        padding-bottom: 15px;
+                    }
+                    .inputnumber{
+                        width: 90%;
+                        height: 60px;
+                        border-radius: 10px;
+                        background-color: #1C1E22;
+                        border: 1px solid #A0A0A1;
+                    }
+                    .inputnumber::placeholder{
+                        padding-left: 20px;
+                        color: #A0A0A1;
+                        font-size: 17px;
+                    }
+                }
+                .emailforms{
+                    padding-left: 30px;
+                    padding-top: 35px;
+                    h3{
+                        color: white;
+                        font-size: 17px;
+                        font-weight: normal;
+                        padding-bottom: 15px;
+                    }
+                    .inputemail{
+                        width: 90%;
+                        height: 60px;
+                        border-radius: 10px;
+                        background-color: #1C1E22;
+                        border: 1px solid #A0A0A1;
+                    }
+                    .inputemail::placeholder{
+                        padding-left: 20px;
+                        color: #A0A0A1;
+                        font-size: 17px;
+                    }
+                }
+                .msgforms{
+                    padding-left: 30px;
+                    padding-top: 35px;
+                    h3{
+                        color: white;
+                        font-size: 17px;
+                        font-weight: normal;
+                        padding-bottom: 15px;
+                    }
+                    .inputmsg{
+                        border-radius: 10px;
+                        width: 90%;
+                        height: 150px;
+                        background-color: #1C1E22;
+                        border: 1px solid #A0A0A1;
+                    }
+                    .inputmsg::placeholder{
+                        position: static;
+                        width: 100px;
+                        height: 200px;
+                        top: 50px;
+                        padding-left: 20px;
+                        color: #A0A0A1;
+                        font-size: 17px;
+                    }
+                }
+            }
+            .buttonContainer{
+                padding-left: 6%;
+                padding-top: 30px;
+                button{
+                    font: normal normal 600 18px/25px 'Helvetica';
+                    border: none;
+                    border-radius: 8px;
+                    background-color: var(--main-purple);
+                    color: white;
+                    padding: 15px 35%;
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    margin: 0 10px;
+        
+                
+                    &:hover {
+                        background-color: var(--main-purple-hover);
+                    }
+                }
+            }
+        }
+    }
+}
+

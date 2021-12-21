@@ -14,7 +14,7 @@ function Navbar() {
                     <li><Link href="/">Accueil</Link></li>
                     <li><Link href="/about">A propos de moi</Link></li>
                     <li><Link href="/project">Projets</Link></li>
-                    <li><Link href="">Me contacter</Link></li>
+                    <li><Link href="/contact">Me contacter</Link></li>
                 </ul>
 
             </div>

@@ -1,10 +1,12 @@
 .projectContainer {
     min-height: 100vh;
     background-color: var(--main-black);
-    padding: 200px;
-    width: 100vw;
     overflow-x: hidden;
+main {
+    padding: 200px;
+}
     .guide{
+        word-wrap: break-word;
         h1{
             color: rgb(161, 161, 161);
             font-size: 18px;
@@ -25,6 +27,7 @@
     }
 }
 .about{
+    padding-bottom: 200px;
     h1{
         color: white;
         font-size: 50px;
@@ -35,5 +38,57 @@
         padding-top: 20px;
     }
 }
+.tipography{
+    h1{
+        color: white;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+    img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}
+.palette{
+    h1{
+        color: white;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+    img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}
+.bouton{
+    h1{
+        color: white;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        font-weight: normal;
+        padding-top: 20px;
+    }
+    img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}
+
 
 
