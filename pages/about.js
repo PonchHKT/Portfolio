@@ -1,4 +1,4 @@
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import styles from '../styles/about.module.scss'
 import Hability from '../components/Hability'

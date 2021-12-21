@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useState } from 'react'
-import Footer from '../components/footer'
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import ParticlesBG from '../components/Particles'
 import Projects from '../components/Projects'
