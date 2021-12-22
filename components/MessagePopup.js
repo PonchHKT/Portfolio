@@ -8,7 +8,7 @@ function Popup(props) {
         <div className={styles.popupinner}>
         <div className={styles.popupitems}>
         <Link href="/">
-        <i class="fad fa-times-circle"></i>
+        <i className="fad fa-times-circle"></i>
         </Link>
         { props.children }
         </div>

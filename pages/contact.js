@@ -43,10 +43,10 @@ export default function Contact() {
 
                     <div className={styles.social}>
                             <ul>
-                                <i class="fab fa-facebook-square" style={{color: '#4267B2'}}></i>
-                                <i class="fab fa-linkedin" style={{color: '#0077b5'}}></i>
-                                <i class="fab fa-discord" style={{color: '#7289da'}}></i>
-                                <i class="fab fa-instagram" style={{color: '#8a3ab9'}}></i>
+                                <i className="fab fa-facebook-square" style={{color: '#4267B2'}}></i>
+                                <i className="fab fa-linkedin" style={{color: '#0077b5'}}></i>
+                                <i className="fab fa-discord" style={{color: '#7289da'}}></i>
+                                <i className="fab fa-instagram" style={{color: '#8a3ab9'}}></i>
                             </ul>
                         </div>
 
