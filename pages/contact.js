@@ -68,7 +68,7 @@ export default function Contact() {
                             
                             <div className={styles.msgforms}>
                             <h3>Message</h3>
-                            <textarea name="message" className={styles.inputmsg} placeholder="Bonjour" minLength="10" onChange={autoComplete} required/>
+                            <textarea name="message" className={styles.inputmsg} placeholder="Message..." minLength="10" onChange={autoComplete} required/>
                             </div>
 
                             <div className={styles.buttonContainer}>
