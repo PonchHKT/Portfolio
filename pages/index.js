@@ -6,6 +6,7 @@ import ParticlesBG from '../components/Particles'
 import Projects from '../components/Projects'
 import PurpleButton from '../components/PurpleButton'
 import styles from '../styles/home.module.scss'
+import Link from 'next/link';
 
 export default function Home() {
     const dlCV = () => {
@@ -18,7 +19,7 @@ export default function Home() {
         document.body.removeChild(a)
     }
 
-    const textIntroTemplate = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+    const textIntroTemplate = "Actuellement étudiant dans une école informatique à Paris (Efrei PARIS). J'ai réalisé plusieurs missions pour différents clients telles que -> Réalisation d'un site web vitrine de restauration, Création d'une application iOS et android, Gestion d'une base de données avec système de recherche par filtre et bien d'autres petites missions. Le fait que je sois à Efrei Paris m'a énormément aidé dans ma capacité à réaliser les tâches des clients. Cette école nous apprend depuis la première année à se débrouiller seul et à apprendre par soi-même. Chose que je fais depuis l'âge de 15 ans car je suis passioné mais j'ai aussi appris à être encore plus autonome grâce à cette école. Je peux m'adapter rapidement aux besoins des clients et même s'il s'agit d'une nouvelle technologie, j'apprends rapidement pour être en mesure de répondre au besoin du client. Je suis bien évidement à l'écoute de mes anciens clients qui ont tous été satisfait de mes services. Mon expérience en tant qu'étudiant du numérique m'ont permis de comprendre comment fonctionne cet univers et je suis maintenant à l'aise avec tout ce qui concerne le freelance : Contacter le client ; Identifier ses besoins ; Définir les problématiques ; Réalisation des tâches avec un suivi pour le client ; Présentation du travail ; Gestion du paiement (devis/factures/...) ; Livraison et installation du travail ; etc... Je me tiens à votre disposition pour toutes informations complémentaires."
 
     const [textIntro, setTextIntro] = useState(textIntroTemplate.substring(0, 300))
 
@@ -53,7 +54,9 @@ export default function Home() {
                         <h3>Ceci est mon Portofolio!</h3>
 
                         <div className={styles.buttonContainer}>
-                            <PurpleButton isPurple text="Mes projets"/>
+                        <Link href="/project">
+                            <li style={{listStyle: 'none'}}><PurpleButton isPurple text="Mes projets"/></li>
+                        </Link>  
                             <PurpleButton text="Télécharger CV" icon="fad fa-download" action={() => dlCV()}/>
                         </div>
 
@@ -100,7 +103,9 @@ export default function Home() {
                                         <button onClick={() => seeMore("moins")}>Voir moins</button>
                                     }
                                 </p>
-                                <PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/>
+                                <Link href="/about">
+                                <li style={{listStyle: 'none'}}><PurpleButton className={styles.infoBtn} text="Plus à propos de moi" icon="fad fa-hand-point-right"/></li>
+                                </Link>
                             </div>
 
                         </div>
@@ -115,7 +120,9 @@ export default function Home() {
                             <Projects/>
                             <Projects/>
                         </div>
-                        <PurpleButton isPurple text="Voir plus de projet"/>
+                        <Link href="/project">
+                        <li style={{listStyle: 'none'}}><PurpleButton isPurple text="Voir plus de projet"/></li>
+                        </Link>
                     </div>
 
                 </div>
