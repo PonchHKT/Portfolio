@@ -64,5 +64,22 @@
             font-size: 15px;
         }
     }
-    
+}
+
+@media screen and (max-width: 800px) {
+    .footerContainer{
+        .footerBody{
+            display: flex;
+            flex-direction: column;
+            h1{
+                display: none;
+            }
+            .footerPage{
+                display: flex;
+                flex-direction: column;
+                ul{
+                }
+            }
+        }
+    }
 }

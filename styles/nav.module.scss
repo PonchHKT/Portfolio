@@ -9,12 +9,11 @@
     width: 100vw;
     height: 100px;
     background-color: #171718;
-    border-bottom: 2px solid rgb(82, 82, 82);
+    border-bottom: 0.01px solid rgb(82, 82, 82);
     // &:hover{
     //     border-bottom: 2px solid cyan
     // }
     div{
-        padding: 0 5%;
         p{
             color: white;
             font-size: 35px;
@@ -32,8 +31,12 @@
     align-items: center;
     height: 100px;
     justify-content: space-between;
-    margin-right: 10%;
+    padding: 0 5%;
+
     ul{
+        hr{
+            display: none;
+        }
         cursor: pointer;
         color: white;
         li{
@@ -66,6 +69,69 @@
                         transform: scaleX(1);
                     }
                 }
+            }
+        }
+    }
+    i {
+        display: none;
+    }
+    .wNavbar2 {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .navContainer {
+        .navItems {
+            .wNavbar {
+                height: 100vh;
+                min-width: 70vw;
+                max-width: 100vw;
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: #171718;
+                border-left: 1px solid gray;
+                z-index: 10000;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding: 5% 0;
+                transform: translateX(150%);
+                transition-duration: 0.4s;
+                hr{
+                    display: block;
+                    height: 2px;
+                    width: 75%;
+                    background-color: gray;
+                    border: none;
+                }
+            }
+            .wNavbarActive {
+                transform: translateX(0)
+            } 
+            .wNavbar2 {
+                display: block;
+                height: 100vh;
+                width: 100vw;
+                background-color: rgba(0, 0, 0, 0);
+                position: absolute;
+                z-index: 9999;
+                top: 0;
+                right: 0;
+                transform: translateX(200%);
+                transition-duration: 0.4s;
+            }
+            .wNavbar2Active {
+                transform: translateX(0)
+            } 
+            i {
+                display: block;
+                color: white !important;
+                font-size: 50px;
+                cursor: pointer;
+    
             }
         }
     }
