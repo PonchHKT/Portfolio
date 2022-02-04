@@ -26,7 +26,7 @@ function Navbar() {
 
                 <div onClick={() => setDisplayMenu(!displayMenu)} className={`${displayMenu ? styles.wNavbar2Active : ''} ${styles.wNavbar2}`}></div>
 
-                <i onClick={() => setDisplayMenu(!displayMenu)} class="fad fa-bars"></i>
+                <i onClick={() => setDisplayMenu(!displayMenu)} className="fad fa-bars"></i>
 
 
             </div>
