@@ -44,3 +44,17 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .habilityContainer{
+        .habilityBox{
+            width: 95vw;
+            margin-right: 40px;
+            padding-right: 30px;
+            h2{
+                font-size: 20px;
+                width: 88vw;
+            }
+        }
+    }
+}

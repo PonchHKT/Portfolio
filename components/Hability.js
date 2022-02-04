@@ -2,7 +2,6 @@ import styles from '../styles/hability.module.scss'
 
 function Hability() {    
     return (
-        <main>
             <div className={styles.habilityContainer}>
 
                 <div className={styles.habilityBox}>
@@ -42,7 +41,6 @@ function Hability() {
                 </div>
 
             </div>
-        </main>
     )
 }
 export default Hability;

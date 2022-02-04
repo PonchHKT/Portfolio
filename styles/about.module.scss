@@ -5,13 +5,13 @@
 
 .aboutintroContainer{
     width: 100vw;
-    padding: 100px 0;
     background-color: var(--main-black);
     display: block;
     align-items: center;
     justify-content: center;
 
     .aboutBox{
+        padding-top: 200px;
         width: 95vw;
         background-color: var(--main-black);
         border-bottom-right-radius: 30px;
@@ -19,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        padding: 30px 10%;
+        padding: 200px 30px 30px;
 
         img{
             width: 18vw;
@@ -44,7 +44,7 @@
         }
     }
 }
-.myhabilityTitle {
+.myHabilityTitle {
     display: flex;
     flex-direction: center;
     align-items: center;
@@ -52,40 +52,38 @@
     width: 100vw;
     height: 100%;
     background-color: var(--main-black);
-    padding-right: 30px;
+    padding-top: 100px;
+    font-weight: bold;
     h1{
         color: white;
+        font-weight: bold;
         background-color: var(--main-black);
         font-size: 50px;
         font-family: 'Montserrat';
-        font-weight: normal;
-        padding-bottom: 50px;
     }
 }
 
-.lineAboutItem1, .lineAboutItem2, .lineAboutItem3, .lineAboutItem4 {
-    position: absolute;
-    width: 5px;
-    height: 50px;
-    background-color: var(--main-purple);
-}   
-
-.lineAboutItem1 {
-    animation: scroll1 6s ease-out infinite;
-    left: 10%;
-}
-
-.lineAboutItem2 {
-    animation: scroll2 8s ease-out infinite;
-    left: 35%;
-}
-
-.lineAboutItem3 {
-    animation: scroll1 9s ease-out infinite;
-    right: 35%;
-}
-
-.lineAboutItem4 {
-    animation: scroll2 7s ease-out infinite;
-    right: 10%;
+@media screen and (max-width: 800px) {
+    .aboutintroContainer{
+        .aboutBox{
+            width: 100vw;
+            padding: 100px 30px 30px;
+            img {
+                display: none;
+            }
+            .aboutText{
+                margin-left: 0;
+                padding-top: 30px;
+            }
+        }
+    }
+    .myHabilityTitle{
+        text-align: center;
+        justify-content: center;
+        color: white;
+        padding-top: 30px;
+        h1{
+            font-weight: bold;
+        }
+    }
 }

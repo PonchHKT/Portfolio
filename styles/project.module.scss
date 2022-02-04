@@ -1,5 +1,4 @@
 .projectContainer {
-    min-height: 100vh;
     background-color: var(--main-black);
     overflow-x: hidden;
 main {
@@ -23,6 +22,9 @@ main {
             align-items: center;
             justify-content: center;
             padding-top: 50px;
+            margin-bottom: 60px;
+            cursor: pointer;
+            width: 100%;
         }
     }
 }
@@ -53,6 +55,9 @@ main {
         align-items: center;
         justify-content: center;
         padding-top: 50px;
+        margin-bottom: 60px;
+        cursor: pointer;
+        width: 100%;
     }
 }
 .palette{
@@ -70,6 +75,9 @@ main {
         align-items: center;
         justify-content: center;
         padding-top: 50px;
+        margin-bottom: 60px;
+        cursor: pointer;
+        width: 100%;
     }
 }
 .bouton{
@@ -87,6 +95,79 @@ main {
         align-items: center;
         justify-content: center;
         padding-top: 50px;
+        margin-bottom: 60px;
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .projectContainer {
+        main {
+            padding: 0px;
+        }
+        img{
+            width: 97vw;
+            padding-left: 15px;
+        }
+        .guide{
+            padding-top: 150px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            img{
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .about{
+        text-align: center;
+        padding-bottom: 50px;
+        h1{
+            font-size: 30px;
+        }
+        h2{
+            padding-left: 50px;
+            width: 90vw;
+        }
+    }
+
+    .tipography{
+        text-align: center;
+        h2{
+            padding-left: 50px;
+            width: 90vw;
+        }
+    }
+
+    .palette{
+        text-align: center;
+        h1{
+            color: white;
+            font-size: 50px;
+        }
+        h2{
+            color: white;
+            font-weight: normal;
+            padding-top: 20px;
+            padding-left: 50px;
+            width: 90vw;
+        }
+    }
+    .bouton{
+        text-align: center;
+        h1{
+            color: white;
+            font-size: 50px;
+        }
+        h2{
+            color: white;
+            font-weight: normal;
+            padding-top: 20px;
+            padding-left: 50px;
+            width: 90vw;
+        }
     }
 }
 
