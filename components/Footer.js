@@ -15,19 +15,23 @@ function Footer() {
 
                     <ul>
                         <li className={styles.footerTitle}><a>Accueil</a></li>
+                        <div className={styles.footerFlex}>
                         <li><a>A propos de moi</a></li>
                         <li><a>Projets</a></li>
+                        </div>
                     </ul>
 
                     <ul>
                         <li className={styles.footerTitle}><a>Me contacter</a></li>
+                        <div className={styles.footerFlex}>
                         <li><a>CV</a></li>
                         <li><a>LinkedIn</a></li>
+                        </div>
                     </ul>
 
                     <ul>
                         <li className={styles.footerTitle}><a>Social</a></li>
-                        <div>
+                        <div className={styles.footerFlex}>
                             <a><i className="fab fa-discord"></i></a>
                             <a><i className="fab fa-github"></i></a>
                             <a><i className="fab fa-discord"></i></a>
@@ -41,7 +45,7 @@ function Footer() {
             <hr/>
 
             <div className={styles.copyright}>
-                <h1>© 2021 Pornchai Chanaloet</h1>
+                <h1>© 2022 Pornchai Chanaloet</h1>
             </div>
             
         </footer>

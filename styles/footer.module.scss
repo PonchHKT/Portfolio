@@ -70,14 +70,26 @@
     .footerContainer{
         .footerBody{
             display: flex;
-            flex-wrap: wrap;
             h1{
                 display: none;
             }
             .footerPage{
                 display: flex;
                 flex-direction: column;
+                justify-content: flex-start;
+                padding-left: 20px;
                 ul{
+                    padding: 0;
+                    .footerTitle{
+                    }
+                    .footerFlex{
+                        display: flex;
+                    }
+                    li{
+                        margin: 0px 0;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
