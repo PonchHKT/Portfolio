@@ -19,7 +19,7 @@ export default function About() {
                     <div className={styles.aboutBox}>
 
                     <div className={styles.imgBox}>
-                        <img src="https://cdn26.us1.fansshare.com/photo/purplewallpapers/purple-wallpaper-purple-wallpapers-476630079.jpg" ></img>
+                        <img src="https://i.ibb.co/qJSFNQB/purple-wallpaper-purple-wallpapers-476630079.jpg"></img>
                         <div className={styles.divImg} style={{width: "426px", height: "240px"}}></div>
                     </div>
 
