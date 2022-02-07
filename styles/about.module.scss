@@ -6,14 +6,14 @@
 
 .aboutintroContainer{
     width: 100vw;
-    height: 60vh;
+    height: 100vh;
     background-color: var(--main-black);
     .aboutBox{
         display: flex;
         align-items: center;
-        margin: 100px auto 200px;
+        margin: 100px auto 100px;
         max-width: 1420px;
-        padding-top: 50px;
+        padding-top: 100px;
         .imgBox{
             display: flex;
             justify-content: center;
@@ -95,13 +95,11 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 100%;
     background-color: var(--main-black);
+    font-weight: semi-bold;
     padding-top: 100px;
-    font-weight: bold;
-    h1{
+    p{
         color: white;
-        font-weight: bold;
         background-color: var(--main-black);
         font-size: 50px;
         font-family: 'Montserrat';

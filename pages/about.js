@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import styles from '../styles/about.module.scss'
 import Hability from '../components/Hability'
 import Link from 'next/link';
-import PurpleButton from '../components/PurpleButton'
 
 export default function About() {
 
@@ -53,15 +52,15 @@ export default function About() {
                             </Link>
                             </div>
 
+
                         </div>
 
                     </div>
                     
+                </div>
 
-                    </div>
-
-                    <div className={styles.myHabilityTitle}>
-                            <h1>Mes habilités</h1>
+                <div className={styles.myHabilityTitle}>
+                            <p>Mes habilités</p>
                         </div>
 
                 </div>
