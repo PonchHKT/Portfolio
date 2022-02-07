@@ -3,43 +3,88 @@
     overflow-x: hidden;
 }
 
+
 .aboutintroContainer{
     width: 100vw;
+    height: 60vh;
     background-color: var(--main-black);
-    display: block;
-    align-items: center;
-    justify-content: center;
-
     .aboutBox{
-        padding-top: 200px;
-        width: 95vw;
-        background-color: var(--main-black);
-        border-bottom-right-radius: 30px;
-        border-bottom-left-radius: 30px;
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 200px 30px 30px;
-
-        img{
-            width: 18vw;
-            max-width: 500px;
-            border-radius: 15px;
-          ;
-        }
-
-        .aboutText{
-            margin-left: 100px;
-
-            h1{
-                color: var(--main-purple);
-                font-size: 40px;
-                margin-bottom: 20px;
+        align-items: center;
+        margin: 100px auto 200px;
+        max-width: 1420px;
+        padding-top: 50px;
+        .imgBox{
+            display: flex;
+            justify-content: center;
+            width: 40%;
+            img{
+                z-index: 2;
+                width: 75%;
+                border-radius: 5px;
             }
-            h2{
-                color: white;
-                font-size: 20px;
-                font-weight: normal;
+            .divImg{
+                position: absolute;
+                border: 2px dashed var(--main-purple);
+                transform: translate(-15px,15px);
+                border-radius: 5px;
+                transition-duration: .2s;
+            }
+        }
+        button {
+            border: none;
+            border-radius: 7px;
+            font-weight: 700;
+            cursor: pointer;
+            transition-duration: .2s;
+        }
+        .aboutCatContainer{
+            width: 60%;
+            .aboutCategory {
+                display: flex;
+                button{
+                    padding: 5px 15px;
+                    margin: 0 10px 0 0;
+                    background-color: transparent;
+                    color: rgb(218, 218, 218);
+                    border: 1px var(--main-purple) solid;
+                    opacity: 1;
+                &:hover {
+                    background-color: var(--main-purple-hover); 
+                    }
+                }
+            }
+            .aboutText{
+                color: rgb(218, 218, 218);
+                margin: 25px 0;
+                transition-duration: .2s;
+                width: 50vw;
+            }
+            
+            .aboutInfos{
+                display: block;
+                margin-bottom: 25px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        padding-right: 120px;
+                        color: rgb(218, 218, 218);
+                        strong {
+                            color: var(--main-purple);
+                        }
+                    }
+                }
+                .contactMe {
+                    background: transparent;
+                    border: 2px solid var(--main-purple);
+                    color: rgb(218, 218, 218);
+                    padding: 15px 25px;
+                    margin-top: 25px;
+                    &:hover {
+                        background-color: var(--main-purple-hover); 
+                        }
+                }
             }
         }
     }
