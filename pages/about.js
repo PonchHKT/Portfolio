@@ -3,8 +3,32 @@ import Navbar from '../components/Navbar'
 import styles from '../styles/about.module.scss'
 import Hability from '../components/Hability'
 import Link from 'next/link';
+import { useState,useEffect } from 'react';
 
 export default function About() {
+
+    const [imgInfos, setImgInfos] = useState({width: '', height: ''})
+
+    useEffect(() => {
+        checkImage()
+
+        window.addEventListener('resize', () => {
+            checkImage()
+        }, 2000)
+
+        setTimeout(() => checkImage(), 400)
+    
+    }, [])
+   
+    const checkImage = () => {
+        if(document !== undefined) {
+            const img = document.querySelector('#img-about')   
+            setImgInfos({
+                width: img.width,
+                height: img.height
+            })
+        }
+    }
 
     return (
         <div className={styles.aboutContainer}>
@@ -18,8 +42,10 @@ export default function About() {
                     <div className={styles.aboutBox}>
 
                     <div className={styles.imgBox}>
-                        <img src="https://i.ibb.co/qJSFNQB/purple-wallpaper-purple-wallpapers-476630079.jpg"></img>
-                        <div className={styles.divImg} style={{width: "426px", height: "240px"}}></div>
+                        <img id='img-about' src="https://i.ibb.co/qJSFNQB/purple-wallpaper-purple-wallpapers-476630079.jpg"></img>
+                        {
+                            imgInfos.width >= 0 && <div id='div-img-about' className={styles.divImg} style={{width: `${imgInfos.width}px`, height: `${imgInfos.height}px`}}/>
+                        }
                     </div>
 
                     <div className={styles.aboutCatContainer}>
