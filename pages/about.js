@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import styles from '../styles/about.module.scss'
 import Hability from '../components/Hability'
 import Link from 'next/link';
-import { useState, useEffect } from 'react'
+import { useState,useEffect } from 'react';
 
 export default function About() {
 
