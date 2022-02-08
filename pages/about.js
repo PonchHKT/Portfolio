@@ -33,7 +33,7 @@ export default function About() {
     return (
         <div className={styles.aboutContainer}>
 
-                <Navbar/>
+            <Navbar/>
 
             <main style={{backgroundColor: 'var(--main-black)'}}>
                 
@@ -63,19 +63,19 @@ export default function About() {
                         <div className={styles.aboutInfos}>
 
                             <div>
-                            <p><strong>Age :</strong> 21 ans</p>
-                            <p><strong>Freelance :</strong> Disponible</p>
+                                <p><strong>Age :</strong> 21 ans</p>
+                                <p><strong>Freelance :</strong> Disponible</p>
                             </div>
 
                             <div>
-                            <p><strong>Nationalité :</strong> FR / TH</p>
-                            <p><strong>Email :</strong> p.chanaloet@efrei.net</p>
+                                <p><strong>Nationalité :</strong> FR / TH</p>
+                                <p><strong>Email :</strong> p.chanaloet@efrei.net</p>
                             </div>
 
                             <div>
-                            <Link href="/about">
-                                <button className={styles.contactMe} icon="fad fa-hand-point-right">Me contacter</button>
-                            </Link>
+                                <Link href="/about">
+                                    <button className={styles.contactMe} icon="fad fa-hand-point-right">Me contacter</button>
+                                </Link>
                             </div>
 
 
@@ -91,7 +91,7 @@ export default function About() {
 
                 </div>
 
-                            <Hability/>
+                <Hability/>
 
             </main>
 
