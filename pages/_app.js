@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps }) {
                 <title>Ponch - Portfolio</title>
                 <meta name="description" content="Bienvenue sur mon Portfolio !" />
                 <meta name="keywords" content="ponch, pornchai, pornchai chanaloet, shux, shuxdev, ponchhkt, " />
-                <link rel="icon" href="/favicon.ico" />
+                <meta property="og:image" content="./img/Capture.PNG" />
+                <meta name="twitter:image" content="./img/Capture.PNG" />
+                <link rel="icon" href="./img/Capture.PNG" />
             </Head>
             <Component {...pageProps} />
         </>
