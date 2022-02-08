@@ -62,8 +62,10 @@ export default function Home() {
 
                 <hr className={styles.separator1}/>
 
-                <div style={{position: 'relative'}}>
-
+                <div className={styles.section1}>
+                    
+                    <img className={styles.luffy} src="./img/luffy.png"></img>
+                    
                     <div className={styles.lineItem1}></div>
                     <div className={styles.lineItem2}></div>
                     <div className={styles.lineItem3}></div>

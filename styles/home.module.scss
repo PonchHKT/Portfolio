@@ -81,6 +81,16 @@
     }
 }
 
+.section1 {
+    position: relative;
+
+    .luffy {
+        position: absolute;
+        right: 20px;
+        top: -348px;
+    }
+}
+
 .lineItem1, .lineItem2, .lineItem3, .lineItem4 {
     position: absolute;
     width: 5px;
@@ -393,7 +403,7 @@
     }
 } 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 820px) {
         .pgContainer{
             .text{
                 h1{
@@ -406,6 +416,14 @@
                 h3{
                     font-size: 20px;
                 }
+            }
+        }
+
+        .section1 {
+            position: relative;
+        
+            .luffy {
+                display: none;
             }
         }
 
