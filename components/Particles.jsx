@@ -15,15 +15,15 @@ const ParticlesBG = () => {
     return (
         <Particles id="tsparticles" init={particlesInit} loaded={particlesLoaded}
             options={{
-                fpsLimit: 60,
+                fpsLimit: 120,
                 interactivity: {
                 events: {
                     onClick: {
-                    enable: false,
+                        enable: false,
                     },
                     onHover: {
-                    enable: true,
-                    mode: "grab",
+                        enable: true,
+                        mode: "grab",
                     },
                     resize: true,
                 },
