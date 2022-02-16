@@ -85,7 +85,7 @@ export default function Home() {
                             
                                 <div>
                                     <h1>Pornchai - C.</h1>
-                                    <h2>Développeur Web</h2>
+                                    <h2>Développeur Web Junior</h2>
                                 </div>
 
                             </div>
