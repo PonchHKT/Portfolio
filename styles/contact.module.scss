@@ -42,33 +42,9 @@ main{
     justify-content: center;
             .contactBox{
                 width: 447px;
-                height: 600px;
+                height: 500px;
                 background-color: #26292D;
                 border-radius: 15px;
-                .numberforms{
-                    padding-left: 30px;
-                    padding-top: 35px;
-                    h3{
-                        color: white;
-                        font-size: 17px;
-                        font-weight: normal;
-                        padding-bottom: 15px;
-                    }
-                    .inputnumber{
-                        width: 90%;
-                        height: 60px;
-                        border-radius: 10px;
-                        background-color: #1C1E22;
-                        border: 1px solid #A0A0A1;
-                        color: white;
-                        padding-left: 20px;
-                        font-size: 20px;
-                    }
-                    .inputnumber::placeholder{
-                        color: #A0A0A1;
-                        font-size: 17px;
-                    }
-                }
                 .emailforms{
                     padding-left: 30px;
                     padding-top: 35px;

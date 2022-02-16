@@ -55,10 +55,6 @@ export default function Contact() {
                     <div className={styles.contactBox}>
 
                         <form ref={form} onSubmit={sendEmail}>
-                            <div className={styles.numberforms}>
-                                <h3>Numéro</h3>
-                                <input name="number" type="number" className={styles.inputnumber} placeholder="Numéro de téléphone" minLength="9" onChange={autoComplete} required/>
-                            </div>
 
                             <div className={styles.emailforms}>
                                 <h3>E-mail</h3>
