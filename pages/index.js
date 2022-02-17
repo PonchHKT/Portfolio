@@ -9,8 +9,35 @@ import Link from 'next/link';
 
 export default function Home() {
 
+    const listImg = [
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://dam.malt.com/bab6ce2d-4500-456c-8fba-2440c3c16a82?func=bound&w=2048&org_if_sml=1'
+        },
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://dam.malt.com/99b43e6f-dd01-4462-a637-b7964484f52e?func=bound&w=2048&org_if_sml=1'
+        },
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://i.gyazo.com/aa2efc809d8eec274b461ce8c4dce073.png'
+        },
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://i.gyazo.com/d9f7f32a30d984f6572d1298a95bb112.png'
+        },
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://i.gyazo.com/2b6ceb4c9753deb2a096337d1e6abe1f.jpg'
+        },
+        {
+            title: 'La Taverne Du Design', 
+            img: 'https://i.gyazo.com/56389beb0446102fe6e025d995043ebc.jpg'
+        },
+    ]
+
     const dlCV = () => {
-        const url = `${window.location.protocol + "//" + window.location.host}/cv/cv.pdf`
+        const url = `./cv/cv.pdf`
         const a = document.createElement("a")
         a.href = url
         a.download = url.split("/").pop()
@@ -30,6 +57,7 @@ export default function Home() {
             setTextIntro(textIntroTemplate.substring(0, 300))
         }
     }
+        
 
     return (
         <div className={styles.homeContainer}>
@@ -113,11 +141,21 @@ export default function Home() {
                     <div className={styles.projectTitle}>
                         <h1>Mes projets</h1>
 
-                        <div>
-                            <Projects/>
-                            <Projects/>
-                            <Projects/>
+                        <div className={styles.portfolioGrid }>
+                            {
+                                listImg.map((x, i) => {
+                                    return (
+                                        <div style={{gridArea: `IMG-${i + 1}`}} className={`portfolioUnique ${styles.onePortfolio}`} key={i}>
+                                            <img src={x.img} alt={x.title} />
+                                            <div className={styles.info}>
+                                                <p>{x.title}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
+
                         <Link href="/project">
                         <li style={{listStyle: 'none'}}><PurpleButton isPurple text="Voir plus de projet"/></li>
                         </Link>

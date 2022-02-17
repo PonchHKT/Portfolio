@@ -70,6 +70,13 @@
                     }
                 }
             }
+
+            a.active {
+                &:before{
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
         }
     }
     i {
@@ -129,7 +136,7 @@
             i {
                 display: block;
                 color: white !important;
-                font-size: 50px;
+                font-size: 60px;
                 cursor: pointer;
     
             }

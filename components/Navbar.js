@@ -15,7 +15,7 @@ function Navbar() {
                 </div>
 
                 <ul className={`${displayMenu ? styles.wNavbarActive : ''} ${styles.wNavbar}`}>
-                    <li><Link href="/">Accueil</Link></li>
+                    <li><Link  href="/">Accueil</Link></li>
                     <hr/>
                     <li><Link href="/about">A propos de moi</Link></li>
                     <hr/>
