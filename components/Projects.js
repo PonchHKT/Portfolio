@@ -11,9 +11,9 @@ const Projects = () => {
                     Project Description
                 </p>
                 <div className={styles.icons}>
-                    <i style={{color: '#EAD41C'}} class="fab fa-js-square"></i>
-                    <i style={{color: '#E44D26'}} class="fab fa-html5"></i>
-                    <i style={{color: '#CD669A'}} class="fab fa-sass"></i>
+                    <i style={{color: '#EAD41C'}} className="fab fa-js-square"></i>
+                    <i style={{color: '#E44D26'}} className="fab fa-html5"></i>
+                    <i style={{color: '#CD669A'}} className="fab fa-sass"></i>
                 </div>
             </div>
 
