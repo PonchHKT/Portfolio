@@ -1,38 +1,76 @@
-import Link from 'next/link';
-import { useState } from 'react';
-import styles from '../styles/nav.module.scss'
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import styles from "../styles/nav.module.scss";
 
 function Navbar() {
+  const [displayMenu, setDisplayMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    const [displayMenu, setDisplayMenu] = useState(false)
+  // Effet pour détecter le défilement
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
 
-    return (
-        <header className={styles.navContainer}>
-            <div className={styles.navItems}>
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrolled]);
 
-                <div>
-                    <p>ShuxDev.</p>
-                </div>
+  return (
+    <header
+      className={`${styles.navContainer} ${scrolled ? styles.scrolled : ""}`}
+    >
+      <nav className={styles.navItems}>
+        <div className={styles.logo}>
+          <Link href="/" className={styles.logoLink}>
+            B<span className={styles.highlight}>ienvenue</span>
+          </Link>
+        </div>
 
-                <ul className={`${displayMenu ? styles.wNavbarActive : ''} ${styles.wNavbar}`}>
-                    <li><Link  href="/">Accueil</Link></li>
-                    <hr/>
-                    <li><Link href="/about">A propos de moi</Link></li>
-                    <hr/>
-                    <li><Link href="/project">Projets</Link></li>
-                    <hr/>
-                    <li><Link href="/contact">Me contacter</Link></li>
-                </ul>
+        <ul
+          className={`${styles.wNavbar} ${
+            displayMenu ? styles.wNavbarActive : ""
+          }`}
+        >
+          <li>
+            <Link href="/">Accueil</Link>
+          </li>
+          <li>
+            <Link href="/about">A propos de moi</Link>
+          </li>
+          <li>
+            <Link href="/project">Projets</Link>
+          </li>
+          <li>
+            <Link href="/contact">Me contacter</Link>
+          </li>
+        </ul>
 
-                <div onClick={() => setDisplayMenu(!displayMenu)} className={`${displayMenu ? styles.wNavbar2Active : ''} ${styles.wNavbar2}`}></div>
+        <div
+          onClick={() => setDisplayMenu(!displayMenu)}
+          className={styles.icon}
+          aria-label={displayMenu ? "Fermer le menu" : "Ouvrir le menu"}
+          role="button"
+          tabIndex={0}
+        >
+          <i className={`fas ${displayMenu ? "fa-times" : "fa-bars"}`}></i>
+        </div>
 
-                <i onClick={() => setDisplayMenu(!displayMenu)} className="fad fa-bars"></i>
-
-
-            </div>
-
-        </header>
-    )
+        <div
+          onClick={() => setDisplayMenu(!displayMenu)}
+          className={`${styles.wNavbar2} ${
+            displayMenu ? styles.wNavbar2Active : ""
+          }`}
+          aria-hidden="true"
+        ></div>
+      </nav>
+    </header>
+  );
 }
 
 export default Navbar;

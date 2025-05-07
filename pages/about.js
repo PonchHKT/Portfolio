@@ -1,104 +1,245 @@
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import styles from '../styles/about.module.scss'
-import Hability from '../components/Hability'
-import Link from 'next/link';
-import { useState,useEffect } from 'react';
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import styles from "../styles/about.module.scss";
+import Hability from "../components/Hability";
+import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 
 export default function About() {
+  const [imgInfos, setImgInfos] = useState({ width: 0, height: 0 });
+  const [activeTab, setActiveTab] = useState("bio");
+  const imgRef = useRef(null);
 
-    const [imgInfos, setImgInfos] = useState({width: '', height: ''})
+  useEffect(() => {
+    // Wait for component to mount before checking image
+    const timeoutId = setTimeout(() => {
+      checkImage();
+    }, 400);
 
-    useEffect(() => {
-        checkImage()
+    // Add resize event listener
+    window.addEventListener("resize", checkImage);
 
-        window.addEventListener('resize', () => {
-            checkImage()
-        }, 2000)
+    // Cleanup function
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener("resize", checkImage);
+    };
+  }, []);
 
-        setTimeout(() => checkImage(), 400)
-    
-    }, [])
-   
-    const checkImage = () => {
-        if(document !== undefined) {
-            const img = document.querySelector('#img-about')   
-            setImgInfos({
-                width: img.width,
-                height: img.height
-            })
-        }
+  const checkImage = () => {
+    if (typeof document !== "undefined" && imgRef.current) {
+      setImgInfos({
+        width: imgRef.current.width,
+        height: imgRef.current.height,
+      });
     }
+  };
 
-    return (
-        <div className={styles.aboutContainer}>
+  // Run checkImage when image loads
+  const handleImageLoad = () => {
+    checkImage();
+  };
 
-            <Navbar/>
+  const renderContent = () => {
+    switch (activeTab) {
+      case "bio":
+        return (
+          <>
+            <h3>À propos de moi</h3>
+            <p>
+              Né en Thaïlande, mon parcours a été marqué par des événements qui
+              ont façonné ma résilience et ma détermination. J'ai vécu le
+              tsunami de 2004, une expérience qui a profondément influencé ma
+              vision de la vie. Suite à cet événement, ma famille et moi avons
+              emménagé en France où j'ai commencé mon intégration dans une
+              nouvelle culture.
+            </p>
+            <p>
+              Quelques années plus tard, je suis retourné en Thaïlande pour y
+              effectuer mon baccalauréat, me reconnectant avec mes racines tout
+              en gardant une perspective internationale. Cette double culture
+              m'a offert une vision unique et m'a poussé à revenir en France
+              pour poursuivre mes études supérieures à EFREI Paris, où j'ai
+              développé ma passion pour le développement web et le design
+              d'interfaces.
+            </p>
+            <p>
+              Aujourd'hui, en tant que développeur front-end, je combine rigueur
+              technique et sensibilité créative, influencées par mon parcours
+              multiculturel unique.
+            </p>
+          </>
+        );
+      case "formation":
+        return (
+          <>
+            <h3>Formation</h3>
+            <h4>EFREI Paris (2019-2023)</h4>
+            <p>
+              Diplôme d'ingénieur en informatique, spécialisation en
+              développement web et technologies front-end.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+              vitae nunc sed urna convallis faucibus. Mauris sed metus ac nisi
+              tempor convallis ut vel magna. Phasellus suscipit, quam ut feugiat
+              commodo, eros mi finibus nisi, in placerat dolor nisi at sapien.
+              Donec vitae velit aliquam, facilisis nisl id, lacinia risus.
+            </p>
+            <h4>Lycée International de Bangkok (2016-2019)</h4>
+            <p>
+              Baccalauréat scientifique avec mention, option sciences de
+              l'ingénieur.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              accumsan odio eget lacus finibus, non bibendum nisl varius.
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas.
+            </p>
+          </>
+        );
+      case "experiences":
+        return (
+          <>
+            <h3>Expertise technique</h3>
+            <h4>Technologies front-end maîtrisées</h4>
+            <ul>
+              <li>
+                <strong>React.js</strong> - Création d'interfaces utilisateur
+                dynamiques et interactives
+              </li>
+              <li>
+                <strong>Next.js</strong> - Développement d'applications React
+                avec rendu côté serveur
+              </li>
+              <li>
+                <strong>SCSS/Sass</strong> - Stylisation avancée avec variables,
+                mixins et structures imbriquées
+              </li>
+              <li>
+                <strong>Animations CSS</strong> - Conception d'interfaces
+                vivantes grâce à des animations fluides
+              </li>
+              <li>
+                <strong>JavaScript ES6+</strong> - Manipulation DOM avancée et
+                programmation asynchrone
+              </li>
+            </ul>
 
-            <main style={{backgroundColor: 'var(--main-black)'}}>
-                
-                <div className={styles.aboutintroContainer}>
+            <h4>Approche responsive</h4>
+            <p>
+              Je conçois chaque interface avec une philosophie "mobile-first",
+              garantissant une expérience utilisateur optimale sur tous les
+              appareils. Mon approche du responsive design repose sur :
+            </p>
+            <ul>
+              <li>Utilisation de grilles flexibles et adaptatives</li>
+              <li>Media queries stratégiquement positionnées</li>
+              <li>Images et contenus optimisés pour différentes résolutions</li>
+              <li>Tests rigoureux sur multiples appareils et navigateurs</li>
+            </ul>
 
-                    <div className={styles.aboutBox}>
+            <h4>UI/UX</h4>
+            <p>
+              Ma conception d'interfaces s'articule autour de principes
+              fondamentaux :
+            </p>
+            <ul>
+              <li>Hiérarchie visuelle claire pour guider l'utilisateur</li>
+              <li>
+                Espacement et typographie soignés pour une lisibilité optimale
+              </li>
+              <li>
+                Palettes de couleurs harmonieuses et cohérentes avec l'identité
+                de marque
+              </li>
+              <li>
+                Microinteractions subtiles améliorant l'engagement utilisateur
+              </li>
+            </ul>
+          </>
+        );
+      default:
+        return null;
+    }
+  };
 
-                    <div className={styles.imgBox}>
-                        <img id='img-about' src="https://i.ibb.co/qJSFNQB/purple-wallpaper-purple-wallpapers-476630079.jpg"></img>
-                        {
-                            imgInfos.width >= 0 && <div className={styles.divImg} id='div-img-about' style={{width: `${imgInfos.width}px`, height: `${imgInfos.height}px`}}/>
-                        }
-                    </div>
+  return (
+    <div className={styles.aboutContainer}>
+      <Navbar />
 
-                    <div className={styles.aboutCatContainer}>
+      <main style={{ backgroundColor: "var(--main-black)" }}>
+        <div className={styles.aboutintroContainer}>
+          <div className={styles.aboutBox}>
+            <div className={styles.aboutCatContainer}>
+              <div className={styles.aboutCategory}>
+                <button
+                  className={activeTab === "bio" ? styles.activeTab : ""}
+                  onClick={() => setActiveTab("bio")}
+                >
+                  Bio
+                </button>
+                <button
+                  className={activeTab === "formation" ? styles.activeTab : ""}
+                  onClick={() => setActiveTab("formation")}
+                >
+                  Formation
+                </button>
+                <button
+                  className={
+                    activeTab === "experiences" ? styles.activeTab : ""
+                  }
+                  onClick={() => setActiveTab("experiences")}
+                >
+                  Expériences
+                </button>
+              </div>
 
-                        <div className={styles.aboutCategory}>
+              <div className={styles.aboutText}>{renderContent()}</div>
 
-                            <button>Bio</button>
-                            <button>Formation</button>
-                            <button>Éxpériences</button>
-
-                        </div>
-
-                        <p className={styles.aboutText}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose injected humour and the like.</p>
-
-                        <div className={styles.aboutInfos}>
-
-                            <div>
-                                <p><strong>Age :</strong> 21 ans</p>
-                                <p><strong>Freelance :</strong> Disponible</p>
-                            </div>
-
-                            <div>
-                                <p><strong>Nationalité :</strong> FR / TH</p>
-                                <p><strong>Email :</strong> p.chanaloet@efrei.net</p>
-                            </div>
-
-                            <div>
-                                <Link href="/about">
-                                    <button className={styles.contactMe} icon="fad fa-hand-point-right">Me contacter</button>
-                                </Link>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-                    
+              <div className={styles.aboutInfos}>
+                <div>
+                  <p>
+                    <strong>Age :</strong> 25 ans
+                  </p>
+                  <p className={styles.statusHighlight}>
+                    <strong>Status :</strong> Recherche d'emploi
+                  </p>
                 </div>
 
-                <div className={styles.myHabilityTitle}>
-                            <p>Mes habilités</p>
-                        </div>
-
+                <div>
+                  <p>
+                    <strong>Nationalité :</strong> FR / TH
+                  </p>
+                  <p>
+                    <strong>Email :</strong> p.chanaloet@gmail.com
+                  </p>
                 </div>
 
-                <Hability/>
+                <div className={styles.contactMeContainer}>
+                  <Link href="/contact">
+                    <button
+                      className={styles.contactMe}
+                      icon="fad fa-hand-point-right"
+                    >
+                      Me contacter
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            </main>
-
-            <Footer/>
-
+          <div className={styles.myHabilityTitle}>
+            <p>Mes habilités</p>
+          </div>
         </div>
-        
-    )
-}
 
+        <Hability />
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

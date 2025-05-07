@@ -1,105 +1,173 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-.footerContainer{
+/* Use Font Awesome 6 Free */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  bottom: 0;
+  width: 100vw;
+  background-color: var(--main-black, #000);
+  padding: 50px 5%;
+  color: white;
+  position: relative; /* Ajout pour créer un nouveau contexte d'empilement */
+  z-index: 10; /* Valeur plus élevée que celle de #tsparticles */
+
+  hr {
+    border: none;
+    background-color: rgb(82, 82, 82);
+    height: 2px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .footerBody {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    bottom: 0;
-    width: 100vw;
-    background-color: var(--main-black);
-    padding: 50px 5%;
-    color: white;
-    hr{
-        border: none;
-        background-color: rgb(82, 82, 82);
-        height: 2px;
-        width: 100%;
-        border-radius: 15px;
-    }
-    .footerBody{
-        display: flex;
-        align-self: start;
-        padding: 50px 0;
-        .footerPage{
-            display: flex;
-            ul{
-                padding: 0 100px;
+    align-self: flex-start;
+    padding: 50px 0;
+    width: 100%;
 
-                .footerTitle{
-                    color: var(--main-purple);
-                    font-weight: bold;
-                    font-size: 25px;
-                    margin-top: 0;
-                }
-                li{
-                    margin: 30px 0;
-                    list-style: none;
-                    cursor: pointer;
-                }
+    .footerPage {
+      display: flex;
+      flex: 1;
 
-                a {
-                    cursor: pointer;
-                    color: white;
+      ul {
+        padding: 0 100px;
 
-                    i {
-                        font-size: 20px;
-                        margin: 0 15px;
-                        transition-duration: 0.2s;
+        .footerTitle {
+          color: var(--main-purple, #800080);
+          font-weight: bold;
+          font-size: 25px;
+          margin-top: 0;
 
-                        &:hover {
-                            color: var(--main-purple);
-                        }
-                    }
-                }
+          h2 {
+            margin: 0;
+          }
+        }
+
+        li {
+          margin: 30px 0;
+          list-style: none;
+          cursor: pointer;
+        }
+
+        a,
+        a:link,
+        a:visited {
+          cursor: pointer;
+          color: white;
+          text-decoration: none;
+
+          i {
+            font-size: 20px;
+            margin: 0 15px;
+            transition-duration: 0.2s;
+
+            &:hover {
+              color: var(--main-purple, #800080);
             }
+          }
         }
-    }
-    .copyright{
-        display: flex;
-        align-self: flex-start;
-        padding-top: 20px;
-        h1{
-            font-weight: normal;
-            font-size: 15px;
+
+        /* Style Next.js Link-rendered <a> tags */
+        a[href] {
+          color: white;
+          text-decoration: none;
+
+          &:hover {
+            color: var(--main-purple, #800080);
+          }
         }
+      }
+
+      /* Apply horizontal layout only to social links */
+      ul:last-child {
+        .footerFlex {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 15px;
+
+          li {
+            margin: 0;
+            display: inline-flex;
+            align-items: center;
+          }
+        }
+      }
     }
+  }
+
+  .copyright {
+    display: flex;
+    align-self: flex-start;
+    padding-top: 20px;
+
+    h1 {
+      font-weight: normal;
+      font-size: 15px;
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .footerContainer{
-        .footerBody{
-            display: flex;
-            h1{
-                display: none;
+  .footerContainer {
+    .footerBody {
+      flex-direction: column;
+      padding: 20px 0;
+
+      h1 {
+        display: none;
+      }
+
+      .footerPage {
+        flex-direction: column;
+        padding-left: 20px;
+
+        ul {
+          padding: 0;
+          margin: 20px 0;
+
+          .footerTitle {
+            font-size: 20px;
+          }
+
+          li {
+            margin: 0 20px 20px 0;
+            font-size: 16px;
+
+            a,
+            a[href] {
+              color: white;
+              text-decoration: none;
+
+              i {
+                margin: 0 10px;
+              }
             }
-            .footerPage{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                padding-left: 20px;
-                ul{
-                    padding: 0;
-                    .footerTitle{
-                    }
-                    .footerFlex{
-                        display: flex;
-                    }
-                    li{
-                        margin: 0px 0;
-                        margin-right: 20px;
-                        margin-bottom: 20px;
-                        text-decoration: none;
-                        a {
-                            text-decoration: none;
-                            color: white;
-                            i {
-                            }
-                        }
-                    }
-                }
-            }
+          }
         }
+
+        /* Apply horizontal layout only to social links */
+        ul:last-child {
+          .footerFlex {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            li {
+              margin: 0 10px 10px 0;
+              display: inline-flex;
+              font-size: 16px;
+            }
+          }
+        }
+      }
     }
+  }
 }

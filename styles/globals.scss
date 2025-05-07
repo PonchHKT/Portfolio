@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+@import "./variables.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Modification ici pour limiter les particules à la zone principale */
+#tsparticles {
+  width: 100%;
+  height: 100vh; /* Hauteur limitée à la fenêtre visible */
+  position: fixed; /* Changement de absolute à fixed */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Valeur faible pour être derrière le contenu */
+  pointer-events: none; /* Permet d'interagir avec les éléments au-dessus */
+}
+
+#tsparticles canvas {
+  position: absolute !important; /* Changé de relative à absolute */
+}
+
+:root {
+  --main-purple-hover: #5758bb;
+  --main-purple: #5c62ec;
+  --main-black: #171718;
+}
+
+body {
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: white;
+}
+
+/* Assurer que tout le contenu principal est au-dessus des particules */
+main,
+header,
+section {
+  position: relative;
+  z-index: 1;
+}
+
+code {
+  font-family: "Montserrat", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-purple);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-purple-hover);
+}

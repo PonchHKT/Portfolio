@@ -1,177 +1,235 @@
 .aboutContainer {
-    min-height: 100vh;
-    overflow-x: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+.aboutintroContainer {
+  width: 100%;
+  background-color: var(--main-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-.aboutintroContainer{
-    width: 100vw;
-    background-color: var(--main-black);
-    .aboutBox{
-        display: flex;
-        align-items: center;
-        margin: 100px auto 100px;
-        max-width: 1420px;
-        padding-top: 100px;
-        .imgBox{
-            display: flex;
-            justify-content: center;
-            width: 40%;
-            img{
-                z-index: 2;
-                width: 75%;
-                border-radius: 5px;
-            }
-            .divImg{
-                position: absolute;
-                border: 2px dashed var(--main-purple);
-                transform: translate(-15px,15px);
-                border-radius: 5px;
-                transition-duration: .2s;
-            }
-        }
-        button {
-            border: none;
-            border-radius: 7px;
-            font-weight: 700;
-            cursor: pointer;
-            transition-duration: .2s;
-        }
-        .aboutCatContainer{
-            width: 60%;
-            .aboutCategory {
-                display: flex;
-                button{
-                    padding: 5px 15px;
-                    margin: 0 10px 0 0;
-                    background-color: transparent;
-                    color: rgb(218, 218, 218);
-                    border: 1px var(--main-purple) solid;
-                    opacity: 1;
-                &:hover {
-                    background-color: var(--main-purple-hover); 
-                    }
-                }
-            }
-            .aboutText{
-                color: rgb(218, 218, 218);
-                margin: 25px 0;
-                transition-duration: .2s;
-                width: 50vw;
-            }
-            
-            .aboutInfos{
-                display: block;
-                margin-bottom: 25px;
-                div {
-                    display: flex;
-                    justify-content: space-between;
-                    p {
-                        padding-right: 120px;
-                        color: rgb(218, 218, 218);
-                        strong {
-                            color: var(--main-purple);
-                        }
-                    }
-                }
-                .contactMe {
-                    background: transparent;
-                    border: 2px solid var(--main-purple);
-                    color: rgb(218, 218, 218);
-                    padding: 15px 25px;
-                    margin-top: 25px;
-                    &:hover {
-                        background-color: var(--main-purple-hover); 
-                        }
-                }
-            }
-        }
-    }
-}
-.myHabilityTitle {
+  .aboutBox {
     display: flex;
-    flex-direction: center;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    background-color: var(--main-black);
-    font-weight: semi-bold;
-    p{
-        color: white;
-        background-color: var(--main-black);
-        font-size: 50px;
-        font-family: 'Montserrat';
+    margin: 100px auto;
+    max-width: 1200px;
+    padding-top: 100px;
+    width: 100%;
+
+    button {
+      border: none;
+      border-radius: 7px;
+      font-weight: 700;
+      cursor: pointer;
+      transition-duration: 0.2s;
     }
+
+    .aboutCatContainer {
+      width: 100%;
+      max-width: 900px;
+
+      .aboutCategory {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        button {
+          padding: 8px 20px;
+          margin: 0 15px;
+          background-color: transparent;
+          color: rgb(218, 218, 218);
+          border: 1px var(--main-purple) solid;
+          opacity: 1;
+
+          &:hover {
+            background-color: var(--main-purple-hover);
+          }
+
+          &.activeTab {
+            background-color: var(--main-purple);
+            color: white;
+          }
+        }
+      }
+
+      .aboutText {
+        text-decoration: none;
+        color: rgb(218, 218, 218);
+        margin: 25px auto;
+        transition-duration: 0.2s;
+        width: 100%;
+        max-width: 1300px;
+
+        h3,
+        h4 {
+          color: var(--main-purple);
+          margin-bottom: 10px;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+
+        h4 {
+          font-size: 1.1rem;
+          margin-top: 15px;
+          font-weight: 500;
+        }
+
+        p {
+          margin-bottom: 15px;
+          line-height: 1.6;
+        }
+
+        ul {
+          margin-left: 20px;
+          margin-bottom: 15px;
+          list-style-type: none;
+
+          li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 5px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              background-color: var(--main-purple);
+              border-radius: 50%;
+              margin-right: 10px;
+              margin-bottom: 1px;
+            }
+
+            strong {
+              color: var(--main-purple);
+            }
+          }
+        }
+      }
+
+      .aboutInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0 25px;
+
+        div {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-bottom: 10px;
+
+          p {
+            padding: 0 20px;
+            color: rgb(218, 218, 218);
+
+            strong {
+              color: var(--main-purple);
+            }
+          }
+
+          .statusHighlight {
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 5px;
+            border-left: 3px solid var(--main-purple);
+          }
+        }
+
+        .contactMeContainer {
+          margin-top: 15px;
+          display: flex;
+          justify-content: center;
+        }
+
+        .contactMe {
+          background: transparent;
+          border: 2px solid var(--main-purple);
+          color: rgb(218, 218, 218);
+          padding: 15px 25px;
+          margin-top: 10px;
+          font-size: 1.1rem;
+
+          &:hover {
+            background-color: var(--main-purple-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+    }
+  }
+}
+
+.myHabilityTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--main-black);
+  padding: 20px 0 40px;
+
+  p {
+    color: white;
+    background-color: var(--main-black);
+    font-size: 50px;
+    font-family: "Montserrat";
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .aboutintroContainer{
-        .aboutBox{
-            display: block;
-            margin: 0;
-            padding-top: 150px;
-            .imgBox{
-                width: 100%;
-                img{
-                }
-                .divImg{
-                    position: absolute;
-                    border: 2px dashed var(--main-purple);
-                    transform: translate(-25px,25px);
-                    border-radius: 5px;
-                    transition-duration: .2s;
-                }
-            }
-            button {
-            }
-            .aboutCatContainer{
-                width: 100%;
-                .aboutCategory {
-                    justify-content: center;
-                    align-items: center;
-                    padding-top: 50px;
-                    button{
-                    &:hover {
-                        
-                        }
-                    }
-                }
-                .aboutText{
-                    width: 100%;
-                    margin: 0;
-                    padding: 25px 25px;
+  .aboutintroContainer {
+    .aboutBox {
+      margin: 50px auto;
+      padding-top: 100px;
 
-                }
-                
-                .aboutInfos{
-                    div {
-                        padding-left: 50px;
-                        align-items: center;
-                        justify-content: center;
-                        display: block;
-                        p {
-                            padding-right: 25px;
-                            padding-bottom: 5px;
-                            strong {
-                            }
-                        }
-                    }
-                    .contactMe {
-                        &:hover {
-                            }
-                    }
-                }
-            }
-        }
-    }
+      .aboutCatContainer {
+        .aboutCategory {
+          flex-wrap: wrap;
 
-    .myHabilityTitle{
-        text-align: center;
-        justify-content: center;
-        color: white;
-        padding-top: 30px;
-        h1{
-            font-weight: bold;
+          button {
+            margin: 5px;
+          }
         }
+
+        .aboutText {
+          width: 90%;
+          padding: 0 10px;
+        }
+
+        .aboutInfos {
+          div {
+            flex-direction: column;
+            align-items: center;
+
+            p {
+              padding: 5px 0;
+              text-align: center;
+            }
+
+            .statusHighlight {
+              margin: 5px 0;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .myHabilityTitle {
+    p {
+      font-size: 36px;
+    }
+  }
 }
