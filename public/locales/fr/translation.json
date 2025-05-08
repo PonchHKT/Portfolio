@@ -16,31 +16,31 @@
     "viewMore": "Voir plus",
     "viewLess": "Voir moins",
     "downloadCV": "Télécharger CV",
-    "bachelor": "BAC+3 Concepteur développeur d'applications",
+    "bachelor": "BAC+3 Concepteur développeur d&apos;applications",
     "myProjects": "Mes projets",
     "moreAboutMe": "Plus à propos de moi",
-    "introText": "Diplômé de l'EFREI Paris, je recherche actuellement un poste de développeur front-end à Grenoble. Passionné par l'univers du web depuis l'âge de 15 ans, je conçois des interfaces fluides et esthétiques qui optimisent l'expérience utilisateur.\n\nParcours & Compétences\nAu cours de ma formation à l'EFREI Paris, j'ai développé une forte autonomie et une capacité d'adaptation rapide. Cette école nous encourage à être autodidactes dès la première année, renforçant ma passion déjà existante pour l'apprentissage continu.\n\nMon expertise s'est construite à travers diverses missions client:\n• Création de sites web vitrines pour la restauration\n• Développement d'applications mobiles iOS et Android\n• Conception et gestion de bases de données avec systèmes de recherche avancés\n• Et de nombreux autres projets sur mesure\n\nApproche Professionnelle\nJe m'investis pleinement dans chaque projet avec une démarche structurée:\n• Échange approfondi pour cerner les besoins\n• Définition précise des problématiques\n• Développement avec suivi régulier\n• Livraison et installation professionnelles\n\nDe nature calme et collaborative, je m'adapte facilement aux nouvelles technologies et méthodologies pour répondre efficacement aux défis techniques.\n\nObjectif Professionnel\nMon ambition est d'apporter un code de qualité et des solutions créatives à des projets ambitieux. Si vous recherchez un profil motivé pour rejoindre votre équipe, je serais ravi d'échanger sur vos besoins et ma contribution potentielle.\n\nN'hésitez pas à me contacter pour toute information supplémentaire."
+    "introText": "Diplômé de l&apos;EFREI Paris, je recherche actuellement un poste de développeur front-end à Grenoble. Passionné par l&apos;univers du web depuis l&apos;âge de 15 ans, je conçois des interfaces fluides et esthétiques qui optimisent l&apos;expérience utilisateur.\n\nParcours & Compétences\nAu cours de ma formation à l&apos;EFREI Paris, j&apos;ai développé une forte autonomie et une capacité d&apos;adaptation rapide. Cette école nous encourage à être autodidactes dès la première année, renforçant ma passion déjà existante pour l&apos;apprentissage continu.\n\nMon expertise s&apos;est construite à travers diverses missions client:\n• Création de sites web vitrines pour la restauration\n• Développement d&apos;applications mobiles iOS et Android\n• Conception et gestion de bases de données avec systèmes de recherche avancés\n• Et de nombreux autres projets sur mesure\n\nApproche Professionnelle\nJe m&apos;investis pleinement dans chaque projet avec une démarche structurée:\n• Échange approfondi pour cerner les besoins\n• Définition précise des problématiques\n• Développement avec suivi régulier\n• Livraison et installation professionnelles\n\nDe nature calme et collaborative, je m&apos;adapte facilement aux nouvelles technologies et méthodologies pour répondre efficacement aux défis techniques.\n\nObjectif Professionnel\nMon ambition est d&apos;apporter un code de qualité et des solutions créatives à des projets ambitieux. Si vous recherchez un profil motivé pour rejoindre votre équipe, je serais ravi d&apos;échanger sur vos besoins et ma contribution potentielle.\n\nN&apos;hésitez pas à me contacter pour toute information supplémentaire."
   },
   "about": {
     "title": "À propos de moi",
     "bioTitle": "À propos de moi",
-    "bioText": "Né en Thaïlande, mon parcours a été marqué par des événements qui ont façonné ma résilience et ma détermination. J'ai vécu le tsunami de 2004, une expérience qui a profondément influencé ma vision de la vie. Suite à cet événement, ma famille et moi avons emménagé en France où j'ai commencé mon intégration dans une nouvelle culture.\n\nQuelques années plus tard, je suis retourné en Thaïlande pour y effectuer mon baccalauréat, me reconnectant avec mes racines tout en gardant une perspective internationale. Cette double culture m'a offert une vision unique et m'a poussé à revenir en France pour poursuivre mes études supérieures à l'EFREI Paris, où j'ai développé ma passion pour le développement web et le design d'interfaces.\n\nAujourd'hui, en tant que développeur front-end, je combine rigueur technique et sensibilité créative, influencées par mon parcours multiculturel unique.",
+    "bioText": "Né en Thaïlande, mon parcours a été marqué par des événements qui ont façonné ma résilience et ma détermination. J&apos;ai vécu le tsunami de 2004, une expérience qui a profondément influencé ma vision de la vie. Suite à cet événement, ma famille et moi avons emménagé en France où j&apos;ai commencé mon intégration dans une nouvelle culture.\n\nQuelques années plus tard, je suis retourné en Thaïlande pour y effectuer mon baccalauréat, me reconnectant avec mes racines tout en gardant une perspective internationale. Cette double culture m&apos;a offert une vision unique et m&apos;a poussé à revenir en France pour poursuivre mes études supérieures à l&apos;EFREI Paris, où j&apos;ai développé ma passion pour le développement web et le design d&apos;interfaces.\n\nAujourd&apos;hui, en tant que développeur front-end, je combine rigueur technique et sensibilité créative, influencées par mon parcours multiculturel unique.",
     "formationTitle": "Formation",
     "formationEfrei": "EFREI Paris (2019-2023)",
-    "formationEfreiText": "Diplôme d'ingénieur en informatique, spécialisation en développement web et technologies front-end.",
+    "formationEfreiText": "Diplôme d&apos;ingénieur en informatique, spécialisation en développement web et technologies front-end.",
     "formationLycée": "Lycée International de Bangkok (2016-2019)",
-    "formationLycéeText": "Baccalauréat scientifique avec mention, option sciences de l'ingénieur.",
+    "formationLycéeText": "Baccalauréat scientifique avec mention, option sciences de l&apos;ingénieur.",
     "experiencesTitle": "Expertise technique",
     "frontendTech": "Technologies front-end maîtrisées",
     "frontendTechList": [
-      "React.js - Création d'interfaces utilisateur dynamiques et interactives",
-      "Next.js - Développement d'applications React avec rendu côté serveur",
+      "React.js - Création d&apos;interfaces utilisateur dynamiques et interactives",
+      "Next.js - Développement d&apos;applications React avec rendu côté serveur",
       "SCSS/Sass - Stylisation avancée avec variables, mixins et structures imbriquées",
-      "Animations CSS - Conception d'interfaces vivantes grâce à des animations fluides",
+      "Animations CSS - Conception d&apos;interfaces vivantes grâce à des animations fluides",
       "JavaScript ES6+ - Manipulation DOM avancée et programmation asynchrone"
     ],
     "responsiveApproach": "Approche responsive",
-    "responsiveText": "Je conçois chaque interface avec une philosophie 'mobile-first', garantissant une expérience utilisateur optimale sur tous les appareils. Mon approche du responsive design repose sur :",
+    "responsiveText": "Je conçois chaque interface avec une philosophie &apos;mobile-first&apos;, garantissant une expérience utilisateur optimale sur tous les appareils. Mon approche du responsive design repose sur :",
     "responsiveList": [
       "Utilisation de grilles flexibles et adaptatives",
       "Media queries stratégiquement positionnées",
@@ -48,17 +48,17 @@
       "Tests rigoureux sur multiples appareils et navigateurs"
     ],
     "uiux": "UI/UX",
-    "uiuxText": "Ma conception d'interfaces s'articule autour de principes fondamentaux :",
+    "uiuxText": "Ma conception d&apos;interfaces s&apos;articule autour de principes fondamentaux :",
     "uiuxList": [
-      "Hiérarchie visuelle claire pour guider l'utilisateur",
+      "Hiérarchie visuelle claire pour guider l&apos;utilisateur",
       "Espacement et typographie soignés pour une lisibilité optimale",
-      "Palettes de couleurs harmonieuses et cohérentes avec l'identité de marque",
-      "Microinteractions subtiles améliorant l'engagement utilisateur"
+      "Palettes de couleurs harmonieuses et cohérentes avec l&apos;identité de marque",
+      "Microinteractions subtiles améliorant l&apos;engagement utilisateur"
     ],
     "info": {
       "age": "Âge",
       "status": "Statut",
-      "jobSearch": "Recherche d'emploi",
+      "jobSearch": "Recherche d&apos;emploi",
       "nationality": "Nationalité",
       "email": "Email",
       "contactMe": "Me contacter"
