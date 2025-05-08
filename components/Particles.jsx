@@ -1,15 +1,14 @@
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import { loadSlim } from "tsparticles-slim"; // Version allégée pour maximiser les performances
 
 const ParticlesBG = () => {
   const particlesInit = useCallback(async (engine) => {
-    // Cette ligne est nécessaire pour l'initialisation correcte
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    console.log("Particles chargées", container);
+    console.log("Particles loaded", container);
   }, []);
 
   return (
@@ -18,83 +17,114 @@ const ParticlesBG = () => {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fpsLimit: 120,
-        interactivity: {
-          events: {
-            onClick: {
-              enable: false,
+        fpsLimit: 60,
+        fullScreen: {
+          enable: true,
+          zIndex: -1,
+        },
+        particles: {
+          number: {
+            value: 25, // Nombre réduit de particules
+            density: {
+              enable: true,
+              area: 1800, // Zone plus grande = moins de particules
             },
+          },
+          color: {
+            value: ["#FFFFFF", "#E9ECEF", "#CED4DA", "#7B2CBF", "#5A189A"], // Blanc et violet uniquement
+          },
+          shape: {
+            type: "circle", // Uniquement des cercles pour réduire la charge
+          },
+          opacity: {
+            value: { min: 0.2, max: 0.5 }, // Opacité réduite
+            animation: {
+              enable: false, // Désactivation de l'animation d'opacité
+            },
+          },
+          size: {
+            value: { min: 1, max: 3 },
+            animation: {
+              enable: false, // Désactivation de l'animation de taille
+            },
+          },
+          links: {
+            enable: true,
+            distance: 200,
+            color: "#9D4EDD", // Violet pour les liens
+            opacity: 0.3,
+            width: 0.8,
+            triangles: {
+              enable: false, // Désactivation des triangles pour plus de performance
+            },
+            shadow: {
+              enable: false, // Pas d'ombres pour éviter le lag
+            },
+          },
+          move: {
+            enable: true,
+            speed: 0.8, // Mouvement lent
+            direction: "none",
+            random: true,
+            straight: false,
+            outModes: {
+              default: "out",
+            },
+            attract: {
+              enable: false, // Désactivation de l'attraction pour réduire les calculs
+            },
+            trail: {
+              enable: false, // Pas de traînées
+            },
+          },
+          wobble: {
+            enable: false, // Désactivation du wobble pour éviter le lag
+          },
+          glow: {
+            enable: false, // Désactivation du glow qui peut causer du lag
+          },
+        },
+        interactivity: {
+          detectsOn: "canvas", // Limité au canvas au lieu de window pour performance
+          events: {
             onHover: {
               enable: true,
-              mode: "grab",
+              mode: "bubble", // Mode léger qui ne crée pas beaucoup de connexions
+              parallax: {
+                enable: false, // Désactivation du parallaxe qui peut causer du lag
+              },
+            },
+            onClick: {
+              enable: true,
+              mode: "push", // Ajoute simplement quelques particules
             },
             resize: true,
           },
           modes: {
-            grab: {
-              distance: 140,
-              links: {
-                opacity: 0.5,
-              },
-            },
             bubble: {
-              distance: 400,
+              distance: 150,
+              size: 5,
               duration: 2,
               opacity: 0.8,
-              size: 40,
             },
             push: {
-              quantity: 4,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
+              quantity: 2, // Ajoute seulement 2 particules au clic
             },
           },
         },
-        particles: {
+        background: {
           color: {
-            value: "#ffffff",
+            value: "black", // Fond violet foncé
           },
-          links: {
-            color: "#ffffff",
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
-          },
-          move: {
-            direction: "none",
-            enable: true,
-            outModes: {
-              default: "out",
-            },
-            random: false,
-            speed: 2,
-            straight: false,
-          },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            random: true,
-            value: 5,
-          },
+        },
+        backgroundMask: {
+          enable: false, // Désactivé pour la performance
+        },
+        motion: {
+          disable: true, // Désactivation des effets de mouvement avancés
         },
         detectRetina: true,
+        smooth: true, // Lissage pour éviter les saccades
       }}
     />
   );
