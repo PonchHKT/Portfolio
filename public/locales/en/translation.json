@@ -22,7 +22,48 @@
     "introText": "Graduated from EFREI Paris, I am currently looking for a front-end developer position in Grenoble. Passionate about the web universe since I was 15, I design fluid and aesthetic interfaces that optimize user experience.\n\nCareer & Skills\nDuring my training at EFREI Paris, I developed strong autonomy and rapid adaptability. This school encourages us to be self-taught from the first year, reinforcing my already existing passion for continuous learning.\n\nMy expertise was built through various client missions:\n• Creation of showcase websites for catering\n• Development of iOS and Android mobile applications\n• Design and management of databases with advanced search systems\n• And many other custom projects\n\nProfessional Approach\nI fully invest in each project with a structured approach:\n• In-depth exchange to understand needs\n• Precise definition of issues\n• Development with regular follow-up\n• Professional delivery and installation\n\nBy nature calm and collaborative, I easily adapt to new technologies and methodologies to effectively meet technical challenges.\n\nProfessional Objective\nMy ambition is to bring quality code and creative solutions to ambitious projects. If you are looking for a motivated profile to join your team, I would be delighted to discuss your needs and my potential contribution.\n\nDo not hesitate to contact me for any additional information."
   },
   "about": {
-    "title": "About me"
+    "title": "About me",
+    "bioTitle": "About me",
+    "bioText": "Born in Thailand, my journey has been marked by events that shaped my resilience and determination. I lived through the 2004 tsunami, an experience that profoundly influenced my outlook on life. After this event, my family and I moved to France, where I began integrating into a new culture.\n\nA few years later, I returned to Thailand to complete my high school diploma, reconnecting with my roots while maintaining an international perspective. This dual culture has given me a unique vision and drove me back to France to pursue higher education at EFREI Paris, where I developed my passion for web development and interface design.\n\nToday, as a front-end developer, I combine technical rigor and creative sensitivity, shaped by my unique multicultural background.",
+    "formationTitle": "Education",
+    "formationEfrei": "EFREI Paris (2019-2023)",
+    "formationEfreiText": "Computer engineering degree, specializing in web development and front-end technologies.",
+    "formationLycée": "Bangkok International School (2016-2019)",
+    "formationLycéeText": "Scientific high school diploma with honors, engineering sciences option.",
+    "experiencesTitle": "Technical expertise",
+    "frontendTech": "Mastered front-end technologies",
+    "frontendTechList": [
+      "React.js - Building dynamic and interactive user interfaces",
+      "Next.js - Developing React applications with server-side rendering",
+      "SCSS/Sass - Advanced styling with variables, mixins, and nested structures",
+      "CSS animations - Designing lively interfaces with smooth animations",
+      "JavaScript ES6+ - Advanced DOM manipulation and asynchronous programming"
+    ],
+    "responsiveApproach": "Responsive approach",
+    "responsiveText": "I design every interface with a 'mobile-first' philosophy, ensuring an optimal user experience on all devices. My approach to responsive design is based on:",
+    "responsiveList": [
+      "Use of flexible, adaptive grids",
+      "Strategically placed media queries",
+      "Images and content optimized for various resolutions",
+      "Rigorous testing on multiple devices and browsers"
+    ],
+    "uiux": "UI/UX",
+    "uiuxText": "My interface design is built around fundamental principles:",
+    "uiuxList": [
+      "Clear visual hierarchy to guide the user",
+      "Careful spacing and typography for optimal readability",
+      "Harmonious color palettes consistent with brand identity",
+      "Subtle micro-interactions enhancing user engagement"
+    ],
+    "info": {
+      "age": "Age",
+      "status": "Status",
+      "jobSearch": "Job seeking",
+      "nationality": "Nationality",
+      "email": "Email",
+      "contactMe": "Contact me"
+    },
+    "mySkills": "My skills"
   },
   "project": {
     "title": "Projects"
