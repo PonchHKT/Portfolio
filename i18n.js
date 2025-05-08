@@ -10,7 +10,7 @@ i18n
   .init({
     fallbackLng: "en",
     supportedLngs: ["en", "fr"], // Définir explicitement les langues supportées
-    lng: "en", // Langue par défaut
+    lng: "fr", // Langue par défaut
     debug: process.env.NODE_ENV === "development",
 
     backend: {

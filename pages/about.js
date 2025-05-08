@@ -3,42 +3,10 @@ import Navbar from "../components/Navbar";
 import styles from "../styles/about.module.scss";
 import Hability from "../components/Hability";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 
 export default function About() {
-  const [imgInfos, setImgInfos] = useState({ width: 0, height: 0 });
   const [activeTab, setActiveTab] = useState("bio");
-  const imgRef = useRef(null);
-
-  useEffect(() => {
-    // Wait for component to mount before checking image
-    const timeoutId = setTimeout(() => {
-      checkImage();
-    }, 400);
-
-    // Add resize event listener
-    window.addEventListener("resize", checkImage);
-
-    // Cleanup function
-    return () => {
-      clearTimeout(timeoutId);
-      window.removeEventListener("resize", checkImage);
-    };
-  }, []);
-
-  const checkImage = () => {
-    if (typeof document !== "undefined" && imgRef.current) {
-      setImgInfos({
-        width: imgRef.current.width,
-        height: imgRef.current.height,
-      });
-    }
-  };
-
-  // Run checkImage when image loads
-  const handleImageLoad = () => {
-    checkImage();
-  };
 
   const renderContent = () => {
     switch (activeTab) {
