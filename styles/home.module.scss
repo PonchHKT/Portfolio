@@ -347,17 +347,27 @@
   }
 }
 
+.text {
+  h1 {
+    color: white;
+    font-family: roboto, arial, helvetica;
+    font-size: 60px;
+
+    .changingTitle {
+      color: var(--main-purple);
+      animation: titleChange 8s infinite;
+    }
+  }
+}
+
 @keyframes titleChange {
   0% {
-    content: "Pornchai Chanaloet";
     opacity: 1;
   }
   50% {
-    content: "Pornchai Chanaloet";
-    opacity: 0.6;
+    opacity: 0.5;
   }
   100% {
-    content: "Pornchai Chanaloet";
     opacity: 1;
   }
 }

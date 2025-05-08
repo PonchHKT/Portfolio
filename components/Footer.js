@@ -1,27 +1,30 @@
 import styles from "../styles/footer.module.scss";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footerContainer}>
       <hr />
 
       <div className={styles.footerBody}>
-        <h1>Portfolio</h1>
+        <h1>{t("footer.title")}</h1>
 
         <div className={styles.footerPage}>
           <ul>
             <li className={styles.footerTitle}>
               <h2>
-                <Link href="/">Accueil</Link>
+                <Link href="/">{t("nav.home")}</Link>
               </h2>
             </li>
             <div className={styles.footerFlex}>
               <li>
-                <Link href="/about">A propos de moi</Link>
+                <Link href="/about">{t("nav.about")}</Link>
               </li>
               <li>
-                <Link href="/project">Projets</Link>
+                <Link href="/project">{t("nav.projects")}</Link>
               </li>
             </div>
           </ul>
@@ -29,13 +32,13 @@ function Footer() {
           <ul>
             <li className={styles.footerTitle}>
               <h2>
-                <Link href="/contact">Me contacter</Link>
+                <Link href="/contact">{t("nav.contact")}</Link>
               </h2>
             </li>
             <div className={styles.footerFlex}>
               <li>
                 <a href="/cv" target="_blank" rel="noopener noreferrer">
-                  CV
+                  {t("home.downloadCV")}
                 </a>
               </li>
               <li>
@@ -52,7 +55,7 @@ function Footer() {
 
           <ul>
             <li className={styles.footerTitle}>
-              <h2>Social</h2>
+              <h2>{t("footer.social")}</h2>
             </li>
             <div className={styles.footerFlex}>
               <li>

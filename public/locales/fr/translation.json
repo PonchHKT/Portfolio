@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos de moi",
+    "projects": "Projets",
+    "contact": "Me contacter",
+    "language": "Langue"
+  },
+  "home": {
+    "title": "Accueil | Portfolio de Pornchai",
+    "mainTitle": "Je suis",
+    "subTitle": "Développeur Front-end",
+    "introTitle": "À propos de moi",
+    "projectsTitle": "Mes projets",
+    "viewMoreProjects": "Voir plus de projets",
+    "viewMore": "Voir plus",
+    "viewLess": "Voir moins",
+    "downloadCV": "Télécharger CV",
+    "bachelor": "BAC+3 Concepteur développeur d'applications",
+    "myProjects": "Mes projets",
+    "moreAboutMe": "Plus à propos de moi",
+    "introText": "Diplômé de l'EFREI Paris, je recherche actuellement un poste de développeur front-end à Grenoble. Passionné par l'univers du web depuis l'âge de 15 ans, je conçois des interfaces fluides et esthétiques qui optimisent l'expérience utilisateur.\n\nParcours & Compétences\nAu cours de ma formation à l'EFREI Paris, j'ai développé une forte autonomie et une capacité d'adaptation rapide. Cette école nous encourage à être autodidactes dès la première année, renforçant ma passion déjà existante pour l'apprentissage continu.\n\nMon expertise s'est construite à travers diverses missions client:\n• Création de sites web vitrines pour la restauration\n• Développement d'applications mobiles iOS et Android\n• Conception et gestion de bases de données avec systèmes de recherche avancés\n• Et de nombreux autres projets sur mesure\n\nApproche Professionnelle\nJe m'investis pleinement dans chaque projet avec une démarche structurée:\n• Échange approfondi pour cerner les besoins\n• Définition précise des problématiques\n• Développement avec suivi régulier\n• Livraison et installation professionnelles\n\nDe nature calme et collaborative, je m'adapte facilement aux nouvelles technologies et méthodologies pour répondre efficacement aux défis techniques.\n\nObjectif Professionnel\nMon ambition est d'apporter un code de qualité et des solutions créatives à des projets ambitieux. Si vous recherchez un profil motivé pour rejoindre votre équipe, je serais ravi d'échanger sur vos besoins et ma contribution potentielle.\n\nN'hésitez pas à me contacter pour toute information complémentaire."
+  },
+  "about": {
+    "title": "À propos de moi"
+  },
+  "project": {
+    "title": "Projets"
+  },
+  "contact": {
+    "title": "Me contacter"
+  },
+  "footer": {
+    "title": "Portfolio",
+    "social": "Réseaux sociaux",
+    "cv": "CV",
+    "linkedin": "LinkedIn"
+  }
+}
