@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import ParticlesBG from "../components/Particles";
 import styles from "../styles/project.module.scss";
 import ProjectCard from "../components/ProjectCard";
 import "../i18n";
@@ -96,9 +95,7 @@ export default function Project() {
       <Navbar />
 
       <main>
-        <div className={styles.headerContainer}>
-          <ParticlesBG />
-        </div>
+        <div className={styles.headerContainer}></div>
 
         <div className={styles.projectsWrapper}>
           {projects.map((project, index) => (

@@ -1,18 +1,20 @@
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import styles from "../styles/contact.module.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import emailjs from "@emailjs/browser";
 import Popup from "../components/MessagePopup";
-import { useState } from "react";
-import React, { useRef } from "react";
 
 export default function Contact() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [text, setText] = useState("");
+  const [sending, setSending] = useState(false);
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
+
     emailjs
       .sendForm(
         "service_bmp205s",
@@ -22,13 +24,26 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Success:", result.text);
+          setSending(false);
+          setButtonPopup(true); // Affiche le popup en cas de succès
         },
         (error) => {
-          console.log(error.text);
+          console.log("Error:", error.text);
+          setSending(false);
+          // Affiche quand même le popup, même en cas d'erreur
+          setButtonPopup(true);
         }
-      );
+      )
+      .catch((error) => {
+        console.log("Catch error:", error);
+        setSending(false);
+        // Affiche quand même le popup en cas d'exception
+        setButtonPopup(true);
+      });
+
     e.target.reset();
+    setText("");
   };
 
   const autoComplete = (e) => {
@@ -38,78 +53,103 @@ export default function Contact() {
   return (
     <div className={styles.contactContainer}>
       <Navbar />
-
       <main>
-        <div className={styles.hello}>
-          <h1>Bonjour !</h1>
-          <h2>
-            Vous pouvez me contacter à travers les réseaux sociaux présentés ici
-            ou sinon <br />
-            n’hésitez pas de me laisser un message en utilisant le formulaire
-            ci-dessous.
-          </h2>
-        </div>
+        <div className={styles.contactCard}>
+          <div className={styles.contentWrapper}>
+            <div className={styles.headerText}>
+              <h2>Contactez-moi</h2>
+              <p>
+                Vous pouvez me contacter à travers les réseaux sociaux ou me
+                laisser un message en utilisant le formulaire ci-dessous.
+              </p>
+            </div>
 
-        <div className={styles.social}>
-          <ul>
-            <i
-              className="fab fa-facebook-square"
-              style={{ color: "#4267B2" }}
-            ></i>
-            <i className="fab fa-linkedin" style={{ color: "#0077b5" }}></i>
-            <i className="fab fa-discord" style={{ color: "#7289da" }}></i>
-            <i className="fab fa-instagram" style={{ color: "#8a3ab9" }}></i>
-          </ul>
-        </div>
+            <div className={styles.social}>
+              <ul>
+                <li>
+                  <i className="fab fa-linkedin"></i>
+                </li>
+                <li>
+                  <i className="fab fa-github"></i>
+                </li>
+                <li>
+                  <i className="fab fa-twitter"></i>
+                </li>
+              </ul>
+            </div>
 
-        <div className={styles.contactboxContainer}>
-          <div className={styles.contactBox}>
-            <form ref={form} onSubmit={sendEmail}>
-              <div className={styles.emailforms}>
-                <h3>E-mail</h3>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className={styles.formContainer}
+            >
+              <div className={styles.formField}>
+                <label htmlFor="email">E-mail</label>
                 <input
-                  name="email"
                   type="email"
-                  className={styles.inputemail}
-                  placeholder="Votre adresse électronique"
-                  minLength="5"
-                  onChange={autoComplete}
+                  name="email"
+                  placeholder="Entrez votre adresse e-mail"
                   required
+                  className={styles.inputField}
                 />
               </div>
 
-              <div className={styles.msgforms}>
-                <h3>Message</h3>
+              <div className={styles.formField}>
+                <label htmlFor="message">Message</label>
                 <textarea
                   name="message"
-                  className={styles.inputmsg}
-                  placeholder="Message..."
-                  minLength="10"
+                  placeholder="Écrivez votre message ici..."
                   onChange={autoComplete}
                   required
+                  className={styles.textareaField}
                 />
               </div>
 
-              <div className={styles.buttonContainer}>
-                <button
-                  disabled={text === ""}
-                  onClick={() => setButtonPopup(true)}
-                  type="submit"
-                  value="Send Message"
-                >
-                  Envoyer
-                </button>
-              </div>
+              <button
+                className={styles.submitButton}
+                disabled={text === "" || sending}
+                type="submit"
+              >
+                {sending ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin"></i>
+                    Envoi en cours...
+                  </>
+                ) : (
+                  <>
+                    <i className="fas fa-paper-plane"></i>
+                    Envoyer
+                  </>
+                )}
+              </button>
 
-              <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-                <h3>Votre message a bien été envoyé !</h3>
-                <p>Je vous répondrais dans les meilleurs délais.</p>
-              </Popup>
+              {/* Bouton de test optionnel - vous pouvez le retirer si non nécessaire */}
+              <button
+                type="button"
+                className={styles.testButton}
+                onClick={() => setButtonPopup(true)}
+                style={{
+                  marginTop: "15px",
+                  padding: "10px 20px",
+                  background: "#333",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                  display: "block", // Mettez 'none' pour cacher ce bouton en production
+                }}
+              >
+                Tester Popup
+              </button>
             </form>
           </div>
         </div>
-      </main>
 
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Votre message a bien été envoyé !</h3>
+          <p>Je vous répondrais dans les meilleurs délais.</p>
+        </Popup>
+      </main>
       <Footer />
     </div>
   );

@@ -39,27 +39,27 @@ export default function Home() {
 
   const listImg = [
     {
-      title: t("home.projectsTitle"),
-      img: "https://dam.malt.com/bab6ce2d-4500-456c-8fba-2440c3c16a82?func=bound&w=2048&org_if_sml=1",
+      title: t("home.standardenLigne"),
+      img: "https://i.ibb.co/mwdQ7Rz/Capture-d-cran-2025-05-08-174613.jpg",
     },
     {
-      title: t("home.projectsTitle"),
-      img: "https://dam.malt.com/99b43e6f-dd01-4462-a637-b7964484f52e?func=bound&w=2048&org_if_sml=1",
+      title: t("home.villaduBonheur"),
+      img: "https://i.ibb.co/9HT4brWp/Capture-d-cran-2025-05-08-175142.jpg",
     },
     {
-      title: t("home.projectsTitle"),
-      img: "https://i.gyazo.com/aa2efc809d8eec274b461ce8c4dce073.png",
+      title: t("home.villaduBonheur"),
+      img: "https://i.ibb.co/5gJsxKfZ/Capture-d-cran-2025-05-08-233942.jpg",
     },
     {
-      title: t("home.projectsTitle"),
-      img: "https://i.gyazo.com/d9f7f32a30d984f6572d1298a95bb112.png",
+      title: t("home.standardenLigne"),
+      img: "https://i.ibb.co/F4DZvfwT/Capture-d-cran-2025-05-08-233512.jpg",
     },
     {
-      title: t("home.projectsTitle"),
+      title: t("home.lataverneduDesign"),
       img: "https://i.gyazo.com/2b6ceb4c9753deb2a096337d1e6abe1f.jpg",
     },
     {
-      title: t("home.projectsTitle"),
+      title: t("home.lataverneduDesign"),
       img: "https://i.gyazo.com/56389beb0446102fe6e025d995043ebc.jpg",
     },
   ];
