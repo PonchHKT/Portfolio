@@ -1,5 +1,6 @@
 module.exports = {
-  extends: ["next", "next/core-web-vitals"],
+  // selon ton setup, peut être `root: true,`
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   rules: {
     "react/no-unescaped-entities": "off",
   },
