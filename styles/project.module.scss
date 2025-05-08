@@ -1,17 +1,78 @@
 .projectContainer {
-    background-color: var(--main-black);
-    overflow-x: hidden;
-main {
-    padding: 100px 25px;
-    div {
-        color: white;
-        text-align: center;
-        h1{
-            font-size: 50px;
-        }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+
+  main {
+    flex: 1;
+  }
+
+  .headerContainer {
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #8458ff, #a27dfc);
+        border-radius: 4px;
+      }
     }
+  }
+
+  .projectsWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    width: 100%; /* Ensure it doesn't exceed container width */
+    animation: fadeIn 1s ease;
+  }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@media (max-width: 768px) {
+  .projectContainer {
+    overflow-x: hidden; /* Ensure no horizontal scroll on smaller screens */
 
+    .headerContainer {
+      height: 200px;
 
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    .projectsWrapper {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+}

@@ -66,7 +66,20 @@
     "mySkills": "Mes habilités"
   },
   "project": {
-    "title": "Projets"
+    "title": "Projets",
+    "standardDescription": "Une plateforme e-commerce complète pour un restaurant standard, offrant une expérience utilisateur fluide et une gestion efficace des commandes en ligne.",
+    "standardFeature1": "Création de tunnel de commandes sécurisé",
+    "standardFeature2": "Intégration Stripe pour les paiements",
+    "standardFeature3": "Front-end responsive et interactif",
+    "standardFeature4": "Base de données MySQL et MongoDB",
+    "villaDescription": "Un site vitrine élégant pour une villa de luxe, intégrant des systèmes de réservation pour offrir une expérience client complète.",
+    "villaFeature1": "Intégration avec Airbnb et Booking",
+    "villaFeature2": "Site vitrine avec design premium",
+    "villaFeature3": "Développé en solo avec React et Vite",
+    "taverneDescription": "Refonte complète d'un site pour un studio de design, mettant l'accent sur l'expérience utilisateur et les performances.",
+    "taverneFeature1": "Refonte complète avec nouvelles technologies",
+    "taverneFeature2": "Intégration de Swiper pour des transitions fluides",
+    "taverneFeature3": "Performance et esthétique optimisées"
   },
   "contact": {
     "title": "Me contacter"
