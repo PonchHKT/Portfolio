@@ -7,7 +7,7 @@
     "language": "Language"
   },
   "home": {
-    "title": "Home | Pornchai's Portfolio",
+    "title": "Home | Pornchai&apos;s Portfolio",
     "mainTitle": "I am",
     "subTitle": "Front-end Developer",
     "introTitle": "About Me",
@@ -16,10 +16,10 @@
     "viewMore": "View More",
     "viewLess": "View Less",
     "downloadCV": "Download CV",
-    "bachelor": "Bachelor's Degree in Application Design and Development",
+    "bachelor": "Bachelor&apos;s Degree in Application Design and Development",
     "myProjects": "My Projects",
     "moreAboutMe": "More About Me",
-    "introText": "A graduate of EFREI Paris, I am currently seeking a front-end developer position in Grenoble. Passionate about the web since the age of 15, I design fluid and aesthetic interfaces that optimize user experience.\n\nJourney & Skills\nDuring my training at EFREI Paris, I developed strong autonomy and quick adaptability. This school encourages self-learning from the first year, reinforcing my pre-existing passion for continuous learning.\n\nMy expertise has been built through various client projects:\n• Creation of showcase websites for restaurants\n• Development of iOS and Android mobile applications\n• Design and management of databases with advanced search systems\n• And many other custom projects\n\nProfessional Approach\nI fully invest in each project with a structured approach:\n• In-depth discussions to understand needs\n• Precise definition of challenges\n• Development with regular follow-ups\n• Professional delivery and installation\n\nCalm and collaborative by nature, I easily adapt to new technologies and methodologies to effectively tackle technical challenges.\n\nProfessional Goal\nMy ambition is to deliver quality code and creative solutions to ambitious projects. If you’re looking for a motivated profile to join your team, I’d be delighted to discuss your needs and my potential contribution.\n\nFeel free to contact me for any additional information."
+    "introText": "A graduate of EFREI Paris, I am currently seeking a front-end developer position in Grenoble. Passionate about the web since the age of 15, I design fluid and aesthetic interfaces that optimize user experience.\n\nJourney & Skills\nDuring my training at EFREI Paris, I developed strong autonomy and quick adaptability. This school encourages self-learning from the first year, reinforcing my pre-existing passion for continuous learning.\n\nMy expertise has been built through various client projects:\n• Creation of showcase websites for restaurants\n• Development of iOS and Android mobile applications\n• Design and management of databases with advanced search systems\n• And many other custom projects\n\nProfessional Approach\nI fully invest in each project with a structured approach:\n• In-depth discussions to understand needs\n• Precise definition of challenges\n• Development with regular follow-ups\n• Professional delivery and installation\n\nCalm and collaborative by nature, I easily adapt to new technologies and methodologies to effectively tackle technical challenges.\n\nProfessional Goal\nMy ambition is to deliver quality code and creative solutions to ambitious projects. If you&apos;re looking for a motivated profile to join your team, I&apos;d be delighted to discuss your needs and my potential contribution.\n\nFeel free to contact me for any additional information."
   },
   "about": {
     "title": "About Me",
@@ -40,7 +40,7 @@
       "JavaScript ES6+ - Advanced DOM manipulation and asynchronous programming"
     ],
     "responsiveApproach": "Responsive Approach",
-    "responsiveText": "I design every interface with a 'mobile-first' philosophy, ensuring an optimal user experience across all devices. My responsive design approach is based on:",
+    "responsiveText": "I design every interface with a &quot;mobile-first&quot; philosophy, ensuring an optimal user experience across all devices. My responsive design approach is based on:",
     "responsiveList": [
       "Use of flexible and adaptive grids",
       "Strategically placed media queries",
