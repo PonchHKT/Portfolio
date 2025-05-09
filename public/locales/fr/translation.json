@@ -70,7 +70,7 @@
   },
   "project": {
     "title": "Projets",
-    "standardDescription": "Une plateforme e-commerce complète pour un restaurant standard, offrant une expérience utilisateur fluide et une gestion efficace des commandes en ligne.",
+    "standardDescription": "Après trois ans d’alternance en développement web, j’ai contribué à la mise en place d’un standard téléphonique virtuel complet : numéro local, SVI, gestion des horaires, suivi en ligne, tunnel de commande intuitif, ainsi que la création d’un back office pour la gestion autonome des services par les utilisateurs.",
     "standardFeature1": "Création de tunnel de commandes sécurisé",
     "standardFeature2": "Intégration Stripe pour les paiements",
     "standardFeature3": "Front-end responsive et interactif",
@@ -78,7 +78,7 @@
     "villaDescription": "Un site vitrine élégant pour une villa de luxe, intégrant des systèmes de réservation pour offrir une expérience client complète.",
     "villaFeature1": "Intégration avec Airbnb et Booking",
     "villaFeature2": "Site vitrine avec design premium",
-    "villaFeature3": "Développé en solo avec React et Vite",
+    "villaFeature3": "Développé avec React et Vite",
     "taverneDescription": "Refonte complète d'un site pour un studio de design, mettant l'accent sur l'expérience utilisateur et les performances.",
     "taverneFeature1": "Refonte complète avec nouvelles technologies",
     "taverneFeature2": "Intégration de Swiper pour des transitions fluides",
