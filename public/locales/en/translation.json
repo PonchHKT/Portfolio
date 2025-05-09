@@ -70,7 +70,7 @@
   },
   "project": {
     "title": "Projects",
-    "standardDescription": "A complete e-commerce platform for a standard restaurant, offering a smooth user experience and efficient online order management.",
+    "standardDescription": "After three years of a web development apprenticeship, I contributed to the implementation of a complete virtual phone system: local number, IVR, schedule management, online monitoring, an intuitive ordering tunnel, and the creation of a back office for users to manage services independently.",
     "standardFeature1": "Creation of a secure order funnel",
     "standardFeature2": "Stripe integration for payments",
     "standardFeature3": "Responsive and interactive front-end",
@@ -78,7 +78,7 @@
     "villaDescription": "An elegant showcase website for a luxury villa, integrating booking systems for a comprehensive client experience.",
     "villaFeature1": "Integration with Airbnb and Booking",
     "villaFeature2": "Showcase site with premium design",
-    "villaFeature3": "Developed solo with React and Vite",
+    "villaFeature3": "Developed with React and Vite",
     "taverneDescription": "Complete redesign of a website for a design studio, focusing on user experience and performance.",
     "taverneFeature1": "Full redesign with modern technologies",
     "taverneFeature2": "Integration of Swiper for smooth transitions",

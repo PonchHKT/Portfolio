@@ -45,7 +45,11 @@ export default function Project() {
         t("project.standardFeature3"),
         t("project.standardFeature4"),
       ],
-      images: ["https://i.ibb.co/mwdQ7Rz/Capture-d-cran-2025-05-08-174613.jpg"],
+      images: [
+        "https://i.ibb.co/mwdQ7Rz/Capture-d-cran-2025-05-08-174613.jpg",
+        "https://i.ibb.co/F4DZvfwT/Capture-d-cran-2025-05-08-233512.jpg",
+      ],
+
       url: "https://www.standardenligne.fr/",
     },
     {
@@ -64,6 +68,7 @@ export default function Project() {
       ],
       images: [
         "https://i.ibb.co/9HT4brWp/Capture-d-cran-2025-05-08-175142.jpg",
+        "https://i.ibb.co/5gJsxKfZ/Capture-d-cran-2025-05-08-233942.jpg",
       ],
       url: "https://villadubonheur.vercel.app/",
     },
